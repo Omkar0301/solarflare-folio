@@ -11,7 +11,7 @@ const Testimonials = () => {
       name: 'Sarah Johnson',
       location: 'Los Angeles, CA',
       rating: 5,
-      text: 'SolarTech transformed our home! Our electricity bills dropped by 85% within the first year. The installation was professional, and the team was incredibly knowledgeable. Best investment we\'ve made.',
+      text: 'KRISHIVA INNOVATIVES completed our factory\'s HT cable installation ahead of schedule. Their team is highly professional and safety-conscious. Excellent work quality and attention to detail.',
     },
     {
       name: 'Michael Chen',
@@ -23,7 +23,7 @@ const Testimonials = () => {
       name: 'Emily Rodriguez',
       location: 'Phoenix, AZ',
       rating: 5,
-      text: 'I was skeptical at first, but SolarTech answered all my questions and made the process seamless. The panels look great, and I love knowing I\'m helping the environment while saving money.',
+      text: 'Outstanding electrical contracting service for our residential project. KRISHIVA INNOVATIVES handled everything from wiring to panel installation with complete professionalism. Highly recommended!',
     },
     {
       name: 'David Thompson',

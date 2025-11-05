@@ -31,7 +31,7 @@ const About = () => {
           {/* Header */}
           <div className="text-center mb-16 animate-slide-up">
             <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4">
-              About <span className="gradient-text">SolarTech Solutions</span>
+              About <span className="gradient-text">KRISHIVA INNOVATIVES</span>
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6" />
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">

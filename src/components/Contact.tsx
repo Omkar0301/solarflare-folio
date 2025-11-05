@@ -75,13 +75,13 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      content: 'info@solartech.com',
-      href: 'mailto:info@solartech.com',
+      content: 'info@krishivainnovatives.com',
+      href: 'mailto:info@krishivainnovatives.com',
     },
     {
       icon: MapPin,
       title: 'Address',
-      content: '123 Solar Street, Los Angeles, CA 90001',
+      content: 'Industrial Area, Phase 2, Mumbai, Maharashtra 400001',
       href: 'https://maps.google.com',
     },
   ];

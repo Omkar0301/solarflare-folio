@@ -43,8 +43,8 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center space-x-2 font-heading font-bold text-2xl gradient-text">
-            <span className="text-primary">☀</span>
-            <span>SolarTech</span>
+            <span className="text-primary">⚡</span>
+            <span>KRISHIVA INNOVATIVES</span>
           </a>
 
           {/* Desktop Navigation */}

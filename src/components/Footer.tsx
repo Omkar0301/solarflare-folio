@@ -41,17 +41,18 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <span className="text-secondary text-3xl">☀</span>
-              <h3 className="font-heading font-bold text-2xl">SolarTech Solutions</h3>
+              <span className="text-secondary text-3xl">⚡</span>
+              <h3 className="font-heading font-bold text-2xl">KRISHIVA INNOVATIVES</h3>
             </div>
             <p className="text-background/80 mb-4 leading-relaxed">
-              Leading solar panel installation company committed to providing sustainable energy solutions 
-              for residential and commercial properties. Building a cleaner, greener future together.
+              Leading electrical contracting company providing expert services in HT/LT cable installation, 
+              solar plants, industrial solutions, and residential wiring. Government-approved contractors 
+              committed to quality and safety.
             </p>
             <div className="space-y-2 text-background/80">
-              <p>📍 123 Solar Street, Los Angeles, CA 90001</p>
-              <p>📞 +1 (555) 123-4567</p>
-              <p>✉️ info@solartech.com</p>
+              <p>📍 Industrial Area, Phase 2, Mumbai, Maharashtra 400001</p>
+              <p>📞 +91 (022) 1234-5678</p>
+              <p>✉️ info@krishivainnovatives.com</p>
             </div>
           </div>
 
@@ -111,7 +112,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-background/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-background/70 text-sm">
-            <p>© {currentYear} SolarTech Solutions. All rights reserved.</p>
+            <p>© {currentYear} KRISHIVA INNOVATIVES. All rights reserved.</p>
             <p>
               Designed with ❤️ by{' '}
               <span className="text-secondary font-medium">Lovable AI</span>
