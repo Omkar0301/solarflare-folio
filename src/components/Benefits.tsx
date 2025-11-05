@@ -1,32 +1,32 @@
-import { Award, Clock, Shield, Users } from 'lucide-react';
+import { DollarSign, Leaf, Shield, TrendingUp } from 'lucide-react';
 
 const Benefits = () => {
   const benefits = [
     {
-      icon: Award,
-      title: 'Certified Excellence',
-      description: 'Government-approved contractors with industry certifications ensuring top-quality electrical installations and safety compliance.',
+      icon: DollarSign,
+      title: 'Cost Savings',
+      description: 'Reduce your electricity bills by up to 80% with solar energy. Most systems pay for themselves in 5-7 years.',
       color: 'text-secondary',
       bgColor: 'bg-secondary/10',
     },
     {
-      icon: Shield,
-      title: 'Safety First',
-      description: 'Stringent safety protocols and quality checks at every stage. We prioritize the safety of your property and personnel.',
+      icon: Leaf,
+      title: 'Eco-Friendly',
+      description: 'Lower your carbon footprint and contribute to a cleaner planet. Each installation prevents tons of CO₂ emissions.',
       color: 'text-primary',
       bgColor: 'bg-primary/10',
     },
     {
-      icon: Clock,
-      title: 'On-Time Delivery',
-      description: 'Proven track record of completing projects within deadlines without compromising on quality or safety standards.',
+      icon: TrendingUp,
+      title: 'Increase Property Value',
+      description: 'Solar installations increase home value by 4-6% on average, making it a smart long-term investment.',
       color: 'text-accent',
       bgColor: 'bg-accent/10',
     },
     {
-      icon: Users,
-      title: 'Expert Team',
-      description: 'Highly skilled engineers and technicians with extensive experience in industrial, commercial, and residential electrical work.',
+      icon: Shield,
+      title: 'Energy Independence',
+      description: 'Generate your own electricity and protect yourself from rising energy costs and power outages.',
       color: 'text-primary-dark',
       bgColor: 'bg-primary/10',
     },
@@ -39,11 +39,11 @@ const Benefits = () => {
           {/* Header */}
           <div className="text-center mb-16 animate-slide-up">
             <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4">
-              Why Choose <span className="gradient-text">KRISHIVA INNOVATIVES</span>
+              Why Choose <span className="gradient-text">Solar Energy</span>
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6" />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Industry-leading electrical contracting services with unmatched quality and reliability
+              Discover the compelling advantages of switching to solar power for your home or business
             </p>
           </div>
 
@@ -70,23 +70,20 @@ const Benefits = () => {
             ))}
           </div>
 
-          {/* Our Vision Stats Section */}
-          <div className="mt-16 bg-foreground rounded-3xl p-6 sm:p-8 md:p-12 shadow-strong animate-scale-in">
-            <h3 className="font-heading font-bold text-2xl sm:text-3xl text-center mb-8 sm:mb-10 text-background">
-              Our Vision & Commitment
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 text-center">
-              <div className="bg-background/5 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-background/10">
-                <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-secondary mb-2 sm:mb-3">25+</div>
-                <div className="text-background text-sm sm:text-base font-medium">Years Warranty</div>
+          {/* Stats Section */}
+          <div className="mt-16 bg-gradient-hero rounded-3xl p-8 md:p-12 text-white shadow-strong animate-scale-in">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div>
+                <div className="text-5xl font-bold text-secondary mb-2">25+</div>
+                <div className="text-white/90 font-medium">Years Warranty</div>
               </div>
-              <div className="bg-background/5 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-background/10">
-                <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-secondary mb-2 sm:mb-3">30%</div>
-                <div className="text-background text-sm sm:text-base font-medium">Federal Tax Credit</div>
+              <div>
+                <div className="text-5xl font-bold text-secondary mb-2">30%</div>
+                <div className="text-white/90 font-medium">Federal Tax Credit</div>
               </div>
-              <div className="bg-background/5 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-background/10 sm:col-span-2 lg:col-span-1">
-                <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-secondary mb-2 sm:mb-3">$2000+</div>
-                <div className="text-background text-sm sm:text-base font-medium">Average Annual Savings</div>
+              <div>
+                <div className="text-5xl font-bold text-secondary mb-2">$2000+</div>
+                <div className="text-white/90 font-medium">Average Annual Savings</div>
               </div>
             </div>
           </div>
