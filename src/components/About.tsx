@@ -42,10 +42,10 @@ const About = () => {
           </div>
 
           {/* Mission Statement */}
-          <div className="bg-gradient-hero text-white rounded-3xl p-8 md:p-12 mb-12 shadow-strong animate-scale-in">
+          <div className="bg-foreground text-background rounded-3xl p-8 md:p-12 mb-12 shadow-strong animate-scale-in">
             <div className="max-w-3xl mx-auto text-center">
               <h3 className="font-heading font-bold text-3xl mb-4">Our Vision</h3>
-              <p className="text-lg leading-relaxed text-white/90">
+              <p className="text-lg leading-relaxed text-background/90">
                 We envision a world powered by clean, renewable energy where every property 
                 harnesses the sun's potential. Through innovative technology and expert craftsmanship, 
                 we're building a sustainable future, one solar panel at a time.
