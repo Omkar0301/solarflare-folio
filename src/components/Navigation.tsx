@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logoImage from '@/assets/logo.png'
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,10 +42,19 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <a href="#home" className="flex items-center space-x-2 font-heading font-bold text-2xl gradient-text">
-            <span className="text-primary">⚡</span>
-            <span>KRISHIVA INNOVATIVES</span>
+          {/* Logo with Image */}
+          <a href="#home" className="flex items-center space-x-2">
+            <img 
+              src={logoImage} 
+              alt="Krishiva Innovatives" 
+              className="h-10 w-auto" // Adjust height as needed
+              onError={(e) => {
+                // Fallback if image fails to load
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+                // You can add a fallback text here if needed
+              }}
+            />
           </a>
 
           {/* Desktop Navigation */}

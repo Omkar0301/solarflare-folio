@@ -1,5 +1,6 @@
 import { Facebook, Twitter, Instagram, Linkedin, ArrowUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logoImage from '@/assets/logo.png';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -41,8 +42,24 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <span className="text-secondary text-3xl">⚡</span>
-              <h3 className="font-heading font-bold text-2xl">KRISHIVA INNOVATIVES</h3>
+              <img 
+                src={logoImage} 
+                alt="Krishiva Innovatives" 
+                className="h-12 w-auto" // Adjust height as needed
+                onError={(e) => {
+                  // Fallback if image fails to load
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  // Fallback text
+                  const fallback = document.createElement('div');
+                  fallback.className = 'flex items-center space-x-2';
+                  fallback.innerHTML = `
+                    <span class="text-secondary text-3xl">⚡</span>
+                    <h3 class="font-heading font-bold text-2xl text-background">KRISHIVA INNOVATIVES</h3>
+                  `;
+                  target.parentNode?.insertBefore(fallback, target);
+                }}
+              />
             </div>
             <p className="text-background/80 mb-4 leading-relaxed">
               Leading electrical contracting company providing expert services in HT/LT cable installation, 
@@ -115,7 +132,7 @@ const Footer = () => {
             <p>© {currentYear} KRISHIVA INNOVATIVES. All rights reserved.</p>
             <p>
               Designed with ❤️ by{' '}
-              <span className="text-secondary font-medium">Lovable AI</span>
+              <span className="text-secondary font-medium">Omkar Vaidya</span>
             </p>
           </div>
         </div>
