@@ -77,8 +77,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      content: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      content: "+91 98765 43210",
+      href: "tel:+919876543210",
     },
     {
       icon: Mail,
@@ -167,7 +167,7 @@ const Contact = () => {
                       type="tel"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+91 98765 43210"
                       required
                       className="w-full"
                     />
@@ -185,7 +185,7 @@ const Contact = () => {
                       type="text"
                       value={formData.location}
                       onChange={handleChange}
-                      placeholder="Los Angeles, CA"
+                      placeholder="Mumbai, Maharashtra"
                       className="w-full"
                     />
                   </div>

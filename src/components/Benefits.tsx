@@ -94,7 +94,7 @@ const Benefits = () => {
               </div>
               <div>
                 <div className="text-5xl font-bold text-secondary mb-2">
-                  $2000+
+                  ₹1,60,000+
                 </div>
                 <div className="text-gray-800 font-medium">
                   Average Annual Savings
