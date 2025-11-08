@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
@@ -8,8 +8,17 @@ import Benefits from '@/components/Benefits';
 import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import Banner from '@/components/Banner';
 
 const Index = () => {
+  const [showBanner, setShowBanner] = useState(true);
+
+  useEffect(() => {
+    // Check if banner should be shown
+    const bannerClosed = localStorage.getItem('bannerClosed');
+    setShowBanner(!bannerClosed);
+  }, []);
+
   useEffect(() => {
     // Add JSON-LD structured data for SEO
     const structuredData = {
@@ -65,17 +74,20 @@ const Index = () => {
   }, []);
 
   return (
-    <main className="min-h-screen">
-      <Navigation />
-      <Hero />
-      <About />
-      <Services />
-      <Portfolio />
-      <Benefits />
-      <Testimonials />
-      <Contact />
-      <Footer />
-    </main>
+    <>
+      <Banner />
+      <main className={`min-h-screen transition-all duration-300 ${showBanner ? 'blur-sm' : 'blur-0'}`}>
+        <Navigation />
+        <Hero />
+        <About />
+        <Services />
+        <Portfolio />
+        <Benefits />
+        <Testimonials />
+        <Contact />
+        <Footer />
+      </main>
+    </>
   );
 };
 
