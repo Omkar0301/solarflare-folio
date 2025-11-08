@@ -1,36 +1,43 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Card } from '@/components/ui/card';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card } from "@/components/ui/card";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    location: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    location: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validation
-    if (!formData.name || !formData.email || !formData.phone || !formData.message) {
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.phone ||
+      !formData.message
+    ) {
       toast({
-        title: 'Missing Information',
-        description: 'Please fill in all required fields.',
-        variant: 'destructive',
+        title: "Missing Information",
+        description: "Please fill in all required fields.",
+        variant: "destructive",
       });
       return;
     }
@@ -39,9 +46,9 @@ const Contact = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       toast({
-        title: 'Invalid Email',
-        description: 'Please enter a valid email address.',
-        variant: 'destructive',
+        title: "Invalid Email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
       });
       return;
     }
@@ -51,15 +58,16 @@ const Contact = () => {
     // Simulate form submission
     setTimeout(() => {
       toast({
-        title: 'Success!',
-        description: 'Thank you for your inquiry. We\'ll contact you within 24 hours.',
+        title: "Success!",
+        description:
+          "Thank you for your inquiry. We'll contact you within 24 hours.",
       });
       setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        location: '',
-        message: '',
+        name: "",
+        email: "",
+        phone: "",
+        location: "",
+        message: "",
       });
       setIsSubmitting(false);
     }, 1500);
@@ -68,21 +76,21 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Phone',
-      content: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      title: "Phone",
+      content: "+1 (555) 123-4567",
+      href: "tel:+15551234567",
     },
     {
       icon: Mail,
-      title: 'Email',
-      content: 'info@krishivainnovatives.com',
-      href: 'mailto:info@krishivainnovatives.com',
+      title: "Email",
+      content: "info@krishivainnovatives.com",
+      href: "mailto:info@krishivainnovatives.com",
     },
     {
       icon: MapPin,
-      title: 'Address',
-      content: 'Industrial Area, Phase 2, Mumbai, Maharashtra 400001',
-      href: 'https://maps.google.com',
+      title: "Address",
+      content: "Industrial Area, Phase 2, Mumbai, Maharashtra 400001",
+      href: "https://maps.google.com",
     },
   ];
 
@@ -97,7 +105,8 @@ const Contact = () => {
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6" />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Ready to make the switch to solar? Contact us today for a free consultation and customized quote
+              Ready to make the switch to solar? Contact us today for a free
+              consultation and customized quote
             </p>
           </div>
 
@@ -107,7 +116,10 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Full Name *
                     </label>
                     <Input
@@ -122,7 +134,10 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Email Address *
                     </label>
                     <Input
@@ -140,7 +155,10 @@ const Contact = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Phone Number *
                     </label>
                     <Input
@@ -155,7 +173,10 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="location" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="location"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Location
                     </label>
                     <Input
@@ -171,7 +192,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Message *
                   </label>
                   <Textarea
@@ -191,14 +215,17 @@ const Contact = () => {
                   disabled={isSubmitting}
                   className="w-full bg-primary hover:bg-primary-dark text-primary-foreground shadow-glow text-lg py-6 group"
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Inquiry'}
+                  {isSubmitting ? "Sending..." : "Send Inquiry"}
                   <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-smooth" />
                 </Button>
               </form>
             </Card>
 
             {/* Contact Information */}
-            <div className="space-y-6 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            <div
+              className="space-y-6 animate-slide-up"
+              style={{ animationDelay: "0.2s" }}
+            >
               {contactInfo.map((info, index) => (
                 <a
                   key={index}
@@ -224,9 +251,11 @@ const Contact = () => {
               ))}
 
               {/* Business Hours */}
-              <Card className="p-6 bg-gradient-hero text-white shadow-strong border-0">
-                <h4 className="font-heading font-semibold text-lg mb-4">Business Hours</h4>
-                <div className="space-y-2 text-white/90">
+              <Card className="p-6 bg-gradient-hero text-gray-900 shadow-strong border-0">
+                <h4 className="font-heading font-semibold text-lg mb-4">
+                  Business Hours
+                </h4>
+                <div className="space-y-2 text-gray-800">
                   <div className="flex justify-between">
                     <span>Monday - Friday</span>
                     <span className="font-semibold">8:00 AM - 6:00 PM</span>

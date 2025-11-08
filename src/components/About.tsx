@@ -1,26 +1,26 @@
-import { Award, Users, Leaf, Zap } from 'lucide-react';
+import { Award, Users, Leaf, Zap } from "lucide-react";
 
 const About = () => {
   const features = [
     {
       icon: Award,
-      title: 'Certified Experts',
-      description: 'Licensed professionals with 15+ years of experience',
+      title: "Certified Experts",
+      description: "Licensed professionals with 15+ years of experience",
     },
     {
       icon: Users,
-      title: 'Customer First',
-      description: 'Dedicated support from consultation to maintenance',
+      title: "Customer First",
+      description: "Dedicated support from consultation to maintenance",
     },
     {
       icon: Leaf,
-      title: 'Eco-Friendly',
-      description: 'Committed to sustainable and green solutions',
+      title: "Eco-Friendly",
+      description: "Committed to sustainable and green solutions",
     },
     {
       icon: Zap,
-      title: 'High Efficiency',
-      description: 'Premium solar panels with maximum energy output',
+      title: "High Efficiency",
+      description: "Premium solar panels with maximum energy output",
     },
   ];
 
@@ -35,20 +35,24 @@ const About = () => {
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6" />
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              For over 15 years, we've been at the forefront of renewable energy solutions, 
-              helping homeowners and businesses transition to clean, sustainable solar power. 
-              Our mission is to make solar energy accessible, affordable, and efficient for everyone.
+              For over 15 years, we've been at the forefront of renewable energy
+              solutions, helping homeowners and businesses transition to clean,
+              sustainable solar power. Our mission is to make solar energy
+              accessible, affordable, and efficient for everyone.
             </p>
           </div>
 
           {/* Mission Statement */}
-          <div className="bg-foreground text-background rounded-3xl p-8 md:p-12 mb-12 shadow-strong animate-scale-in">
+          <div className="bg-gradient-hero text-gray-900 rounded-3xl p-8 md:p-12 mb-12 shadow-strong animate-scale-in">
             <div className="max-w-3xl mx-auto text-center">
-              <h3 className="font-heading font-bold text-3xl mb-4">Our Vision</h3>
-              <p className="text-lg leading-relaxed text-background/90">
-                We envision a world powered by clean, renewable energy where every property 
-                harnesses the sun's potential. Through innovative technology and expert craftsmanship, 
-                we're building a sustainable future, one solar panel at a time.
+              <h3 className="font-heading font-bold text-3xl mb-4">
+                Our Vision
+              </h3>
+              <p className="text-lg leading-relaxed text-gray-800">
+                We envision a world powered by clean, renewable energy where
+                every property harnesses the sun's potential. Through innovative
+                technology and expert craftsmanship, we're building a
+                sustainable future, one solar panel at a time.
               </p>
             </div>
           </div>
