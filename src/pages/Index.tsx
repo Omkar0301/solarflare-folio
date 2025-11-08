@@ -13,11 +13,9 @@ import Banner from '@/components/Banner';
 const Index = () => {
   const [showBanner, setShowBanner] = useState(true);
 
-  useEffect(() => {
-    // Check if banner should be shown
-    const bannerClosed = localStorage.getItem('bannerClosed');
-    setShowBanner(!bannerClosed);
-  }, []);
+  const handleBannerClose = () => {
+    setShowBanner(false);
+  };
 
   useEffect(() => {
     // Add JSON-LD structured data for SEO
@@ -75,8 +73,8 @@ const Index = () => {
 
   return (
     <>
-      <Banner />
-      <main className={`min-h-screen transition-all duration-300 ${showBanner ? 'blur-sm' : 'blur-0'}`}>
+      {showBanner && <Banner onClose={handleBannerClose} />}
+      <main className={`min-h-screen transition-all duration-500 ${showBanner ? 'blur-sm' : 'blur-0'}`}>
         <Navigation />
         <Hero />
         <About />
