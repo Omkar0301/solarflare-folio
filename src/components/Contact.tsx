@@ -5,8 +5,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -35,8 +37,8 @@ const Contact = () => {
       !formData.message
     ) {
       toast({
-        title: "Missing Information",
-        description: "Please fill in all required fields.",
+        title: t('contact.form.error'),
+        description: t('contact.form.error'),
         variant: "destructive",
       });
       return;
@@ -46,8 +48,8 @@ const Contact = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       toast({
-        title: "Invalid Email",
-        description: "Please enter a valid email address.",
+        title: t('contact.form.error'),
+        description: t('contact.form.error'),
         variant: "destructive",
       });
       return;
@@ -58,9 +60,8 @@ const Contact = () => {
     // Simulate form submission
     setTimeout(() => {
       toast({
-        title: "Success!",
-        description:
-          "Thank you for your inquiry. We'll contact you within 24 hours.",
+        title: t('contact.form.success'),
+        description: t('contact.form.success'),
       });
       setFormData({
         name: "",
@@ -76,20 +77,20 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: "Phone",
-      content: "+91 98765 43210",
+      title: t('contact.info.phone.title'),
+      content: t('contact.info.phone.value'),
       href: "tel:+919876543210",
     },
     {
       icon: Mail,
-      title: "Email",
-      content: "info@krishivainnovatives.com",
+      title: t('contact.info.email.title'),
+      content: t('contact.info.email.value'),
       href: "mailto:info@krishivainnovatives.com",
     },
     {
       icon: MapPin,
-      title: "Address",
-      content: "Industrial Area, Phase 2, Mumbai, Maharashtra 400001",
+      title: t('contact.info.address.title'),
+      content: t('contact.info.address.value'),
       href: "https://maps.google.com",
     },
   ];
@@ -101,12 +102,11 @@ const Contact = () => {
           {/* Header */}
           <div className="text-center mb-16 animate-slide-up">
             <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4">
-              Get Your <span className="gradient-text">Free Quote</span>
+              {t('contact.title')}
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6" />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Ready to make the switch to solar? Contact us today for a free
-              consultation and customized quote
+              {t('contact.description')}
             </p>
           </div>
 
@@ -120,7 +120,7 @@ const Contact = () => {
                       htmlFor="name"
                       className="block text-sm font-medium mb-2"
                     >
-                      Full Name *
+                      {t('contact.form.name')} *
                     </label>
                     <Input
                       id="name"
@@ -128,7 +128,7 @@ const Contact = () => {
                       type="text"
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="John Doe"
+                      placeholder={t('contact.form.namePlaceholder')}
                       required
                       className="w-full"
                     />
@@ -138,7 +138,7 @@ const Contact = () => {
                       htmlFor="email"
                       className="block text-sm font-medium mb-2"
                     >
-                      Email Address *
+                      {t('contact.form.email')} *
                     </label>
                     <Input
                       id="email"
@@ -146,7 +146,7 @@ const Contact = () => {
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="john@example.com"
+                      placeholder={t('contact.form.emailPlaceholder')}
                       required
                       className="w-full"
                     />
@@ -159,7 +159,7 @@ const Contact = () => {
                       htmlFor="phone"
                       className="block text-sm font-medium mb-2"
                     >
-                      Phone Number *
+                      {t('contact.form.phone')} *
                     </label>
                     <Input
                       id="phone"
@@ -167,7 +167,7 @@ const Contact = () => {
                       type="tel"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+91 98765 43210"
+                      placeholder={t('contact.form.phonePlaceholder')}
                       required
                       className="w-full"
                     />
@@ -177,7 +177,7 @@ const Contact = () => {
                       htmlFor="location"
                       className="block text-sm font-medium mb-2"
                     >
-                      Location
+                      {t('contact.form.location')}
                     </label>
                     <Input
                       id="location"
@@ -185,7 +185,7 @@ const Contact = () => {
                       type="text"
                       value={formData.location}
                       onChange={handleChange}
-                      placeholder="Mumbai, Maharashtra"
+                      placeholder={t('contact.form.locationPlaceholder')}
                       className="w-full"
                     />
                   </div>
@@ -196,14 +196,14 @@ const Contact = () => {
                     htmlFor="message"
                     className="block text-sm font-medium mb-2"
                   >
-                    Message *
+                    {t('contact.form.message')} *
                   </label>
                   <Textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tell us about your solar energy needs..."
+                    placeholder={t('contact.form.messagePlaceholder')}
                     required
                     rows={6}
                     className="w-full resize-none"
@@ -215,7 +215,7 @@ const Contact = () => {
                   disabled={isSubmitting}
                   className="w-full bg-primary hover:bg-primary-dark text-primary-foreground shadow-glow text-lg py-6 group"
                 >
-                  {isSubmitting ? "Sending..." : "Send Inquiry"}
+                  {isSubmitting ? t('contact.form.sending') : t('contact.form.submit')}
                   <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-smooth" />
                 </Button>
               </form>
@@ -253,20 +253,20 @@ const Contact = () => {
               {/* Business Hours */}
               <Card className="p-6 bg-gradient-hero text-gray-900 shadow-strong border-0">
                 <h4 className="font-heading font-semibold text-lg mb-4">
-                  Business Hours
+                  {t('contact.hours.title')}
                 </h4>
                 <div className="space-y-2 text-gray-800">
                   <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span className="font-semibold">8:00 AM - 6:00 PM</span>
+                    <span>{t('contact.hours.weekdays').split(':')[0]}</span>
+                    <span className="font-semibold">{t('contact.hours.weekdays').split(':')[1]}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Saturday</span>
-                    <span className="font-semibold">9:00 AM - 4:00 PM</span>
+                    <span>{t('contact.hours.saturday').split(':')[0]}</span>
+                    <span className="font-semibold">{t('contact.hours.saturday').split(':')[1]}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Sunday</span>
-                    <span className="font-semibold">Closed</span>
+                    <span>{t('contact.hours.sunday').split(':')[0]}</span>
+                    <span className="font-semibold">{t('contact.hours.sunday').split(':')[1]}</span>
                   </div>
                 </div>
               </Card>

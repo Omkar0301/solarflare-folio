@@ -1,62 +1,81 @@
 import { Card } from '@/components/ui/card';
+import { useTranslation } from 'react-i18next';
 import htLtCablesImg from '@/assets/service-ht-lt-cables.jpg';
-import cableTrayImg from '@/assets/service-cable-tray.jpg';
-import residentialWiringImg from '@/assets/service-residential-wiring.jpg';
 import solarPlantImg from '@/assets/service-solar-plant.jpg';
 import electricalPanelImg from '@/assets/service-electrical-panel.jpg';
-import cleanroomLightingImg from '@/assets/service-cleanroom-lighting.jpg';
-import heavyEquipmentImg from '@/assets/service-heavy-equipment.jpg';
-import govtApprovedImg from '@/assets/service-govt-approved.jpg';
+import installationImg from '@/assets/service-installation.jpg';
+import consultationImg from '@/assets/service-consultation.jpg';
+import solutionsImg from '@/assets/service-solutions.jpg';
 
 const Services = () => {
+  const { t } = useTranslation();
+  
   const services = [
     {
-      title: 'HT/LT Cable Laying & Termination',
-      description: 'Expert installation and termination of high-tension and low-tension electrical cables for industrial and commercial infrastructure with precision and safety compliance.',
+      title: t('services.items.htLt.title'),
+      description: t('services.items.htLt.description'),
       image: htLtCablesImg,
-      features: ['Cable Laying', 'HT/LT Termination', 'Underground Cabling', 'Testing & Commissioning'],
+      features: [
+        t('services.items.htLt.features.0'),
+        t('services.items.htLt.features.1'),
+        t('services.items.htLt.features.2'),
+        t('services.items.htLt.features.3'),
+      ],
     },
     {
-      title: 'Cable Tray Installation',
-      description: 'Professional cable tray system design and installation for organized cable management in commercial buildings and industrial facilities.',
-      image: cableTrayImg,
-      features: ['System Design', 'Tray Installation', 'Cable Organization', 'Safety Standards'],
-    },
-    {
-      title: 'Residential Wiring',
-      description: 'Complete electrical wiring solutions for residential properties including new installations, upgrades, and maintenance services.',
-      image: residentialWiringImg,
-      features: ['House Wiring', 'Outlet Installation', 'Circuit Setup', 'Safety Inspection'],
-    },
-    {
-      title: 'Solar Plant Installation & Commissioning',
-      description: 'End-to-end solar power plant installation and commissioning services for large-scale renewable energy projects.',
+      title: t('services.items.solar.title'),
+      description: t('services.items.solar.description'),
       image: solarPlantImg,
-      features: ['Plant Design', 'Installation', 'Grid Connection', 'Performance Testing'],
+      features: [
+        t('services.items.solar.features.0'),
+        t('services.items.solar.features.1'),
+        t('services.items.solar.features.2'),
+        t('services.items.solar.features.3'),
+      ],
     },
     {
-      title: 'Electrical Panel Installation & Commissioning',
-      description: 'Professional installation and commissioning of electrical control panels, distribution boards, and switchgear systems.',
+      title: t('services.items.panel.title'),
+      description: t('services.items.panel.description'),
       image: electricalPanelImg,
-      features: ['Panel Installation', 'System Integration', 'Load Testing', 'Documentation'],
+      features: [
+        t('services.items.panel.features.0'),
+        t('services.items.panel.features.1'),
+        t('services.items.panel.features.2'),
+        t('services.items.panel.features.3'),
+      ],
     },
     {
-      title: 'Cleanroom Light Fitting for Pharma Plants',
-      description: 'Specialized cleanroom lighting installation for pharmaceutical facilities meeting strict contamination control and regulatory standards.',
-      image: cleanroomLightingImg,
-      features: ['Cleanroom Lights', 'Sterile Installation', 'Compliance', 'LED Solutions'],
+      title: t('services.items.maintenance.title'),
+      description: t('services.items.maintenance.description'),
+      image: installationImg,
+      features: [
+        t('services.items.maintenance.features.0'),
+        t('services.items.maintenance.features.1'),
+        t('services.items.maintenance.features.2'),
+        t('services.items.maintenance.features.3'),
+      ],
     },
     {
-      title: 'DG Set, Transformer & Heavy Equipment Commissioning',
-      description: 'Expert commissioning services for diesel generators, transformers, and heavy electrical equipment with comprehensive testing protocols.',
-      image: heavyEquipmentImg,
-      features: ['DG Commissioning', 'Transformer Setup', 'Load Testing', 'Maintenance Plans'],
+      title: t('services.items.consultation.title'),
+      description: t('services.items.consultation.description'),
+      image: consultationImg,
+      features: [
+        t('services.items.consultation.features.0'),
+        t('services.items.consultation.features.1'),
+        t('services.items.consultation.features.2'),
+        t('services.items.consultation.features.3'),
+      ],
     },
     {
-      title: 'Government-Approved Electrical Contractors',
-      description: 'Certified and government-approved electrical contracting services ensuring compliance with all electrical codes and safety regulations.',
-      image: govtApprovedImg,
-      features: ['Licensed Contractors', 'Code Compliance', 'Safety Standards', 'Quality Assurance'],
+      title: t('services.items.solutions.title'),
+      description: t('services.items.solutions.description'),
+      image: solutionsImg,
+      features: [
+        t('services.items.solutions.features.0'),
+        t('services.items.solutions.features.1'),
+        t('services.items.solutions.features.2'),
+        t('services.items.solutions.features.3'),
+      ],
     },
   ];
 
@@ -67,11 +86,11 @@ const Services = () => {
           {/* Header */}
           <div className="text-center mb-16 animate-slide-up">
             <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4">
-              Our <span className="gradient-text">Services</span>
+              {t('services.title')}
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6" />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive electrical contracting services from residential wiring to industrial-scale installations and commissioning
+              {t('services.subtitle')}
             </p>
           </div>
 

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 import bannerImage from "@/assets/service-electrical-panel.jpg";
 
 interface BannerProps {
@@ -8,6 +9,7 @@ interface BannerProps {
 }
 
 const Banner = ({ onClose }: BannerProps) => {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -63,22 +65,17 @@ const Banner = ({ onClose }: BannerProps) => {
         {/* Banner content */}
         <div className="relative z-10 text-center px-6 py-12 md:py-16 space-y-6">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-lg">
-            Welcome to KRISHIVA INNOVATIVES
+            {t('banner.welcome')}
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl text-white/90 drop-shadow-md max-w-2xl mx-auto">
-            Leading Electrical Contracting Solutions for Industrial & Commercial
-            Projects
-          </p>
-          <p className="text-base md:text-lg text-white/80 drop-shadow-md">
-            Expert HT/LT Cable Installation • Solar Plant Commissioning •
-            Government Approved Contractors
+            {t('banner.message')}
           </p>
           <Button
             onClick={handleClose}
             size="lg"
             className="mt-8 bg-[#2563eb] hover:bg-[#1d4ed8] text-white shadow-lg hover:shadow-xl transition-all"
           >
-            Explore Our Services
+            {t('banner.close')}
           </Button>
         </div>
       </div>

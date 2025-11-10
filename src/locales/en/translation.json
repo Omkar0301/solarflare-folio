@@ -1,0 +1,248 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "getQuote": "Get Free Quote"
+  },
+  "banner": {
+    "welcome": "Welcome to KRISHIVA INNOVATIVES",
+    "message": "Leading provider of comprehensive electrical solutions and solar energy systems across India.",
+    "close": "Close"
+  },
+  "hero": {
+    "title": "Powering Progress with",
+    "energyTexts": {
+      "solar": "Solar Energy",
+      "electrical": "Electrical Excellence",
+      "innovation": "Smart Innovation",
+      "sustainability": "Sustainable Solutions"
+    },
+    "description": "Leading electrical contracting company specializing in HT/LT cable installation, solar plant commissioning, and comprehensive industrial electrical solutions across India.",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "stats": {
+      "projects": "Projects Completed",
+      "clients": "Happy Clients",
+      "experience": "Years Experience",
+      "capacity": "MW Solar Capacity"
+    },
+    "scrollDown": "Scroll to explore"
+  },
+  "about": {
+    "companyName": "KRISHIVA INNOVATIVES",
+    "intro": "At KRISHIVA INNOVATIVES, we are committed to delivering cutting-edge electrical solutions that power industries and communities. With years of expertise in HT/LT cable installations, solar plant commissioning, and comprehensive electrical contracting, we ensure safety, efficiency, and sustainability in every project.",
+    "vision": "Our Vision",
+    "visionText": "To be India's most trusted name in electrical contracting and renewable energy solutions, driving sustainable development and powering the future with innovation and excellence.",
+    "features": {
+      "experience": {
+        "title": "Industry Expertise",
+        "description": "Decades of experience in electrical contracting and renewable energy solutions"
+      },
+      "certified": {
+        "title": "Certified Professionals",
+        "description": "Team of licensed electricians and engineers with industry certifications"
+      },
+      "quality": {
+        "title": "Quality Assurance",
+        "description": "Rigorous quality control and safety standards on every project"
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "Round-the-clock technical support and emergency services"
+      }
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive Electrical Solutions",
+    "items": {
+      "htLt": {
+        "title": "HT/LT Cable Installation",
+        "description": "Expert installation of high-tension and low-tension cables with proper safety measures and compliance.",
+        "features": [
+          "Underground & overhead cable laying",
+          "Cable jointing and termination",
+          "Testing and commissioning",
+          "Maintenance and fault detection"
+        ]
+      },
+      "solar": {
+        "title": "Solar Plant Commissioning",
+        "description": "Complete solar power plant setup from design to commissioning for commercial and industrial projects.",
+        "features": [
+          "Site assessment and design",
+          "Panel installation and wiring",
+          "Grid connection and synchronization",
+          "Performance monitoring systems"
+        ]
+      },
+      "panel": {
+        "title": "Electrical Panel Assembly",
+        "description": "Custom electrical panel design and assembly for control systems and power distribution.",
+        "features": [
+          "Control panel design",
+          "MCC and PCC panels",
+          "Automation integration",
+          "Quality testing and certification"
+        ]
+      },
+      "maintenance": {
+        "title": "Maintenance Services",
+        "description": "Comprehensive electrical maintenance services to ensure optimal performance and safety.",
+        "features": [
+          "Preventive maintenance",
+          "Emergency repairs",
+          "Equipment upgrades",
+          "Safety inspections"
+        ]
+      },
+      "consultation": {
+        "title": "Engineering Consultation",
+        "description": "Expert consultation for electrical system design, energy efficiency, and compliance.",
+        "features": [
+          "System design and planning",
+          "Energy audit services",
+          "Compliance consulting",
+          "Technical documentation"
+        ]
+      },
+      "solutions": {
+        "title": "Industrial Solutions",
+        "description": "Tailored electrical solutions for industrial facilities and manufacturing plants.",
+        "features": [
+          "Process automation",
+          "Power quality solutions",
+          "Load management systems",
+          "Safety systems integration"
+        ]
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Our Portfolio",
+    "subtitle": "Showcasing Excellence in Electrical Solutions",
+    "projects": {
+      "solar": {
+        "title": "Commercial Solar Plant",
+        "category": "Solar Energy",
+        "capacity": "5 MW",
+        "location": "Mumbai, Maharashtra",
+        "description": "Complete installation and commissioning of a 5 MW solar power plant for a commercial complex, including grid integration and monitoring systems."
+      },
+      "industrial": {
+        "title": "Industrial HT/LT Installation",
+        "category": "Electrical Infrastructure",
+        "capacity": "11 KV/433 V",
+        "location": "Pune, Maharashtra",
+        "description": "High-tension and low-tension cable installation for a manufacturing facility, including substation setup and complete electrical infrastructure."
+      }
+    }
+  },
+  "benefits": {
+    "title": "Why Choose Solar Energy?",
+    "items": {
+      "savings": {
+        "title": "Significant Cost Savings",
+        "description": "Save up to ₹1,60,000+ annually on electricity bills with solar energy."
+      },
+      "subsidy": {
+        "title": "Government Subsidies",
+        "description": "Take advantage of state and central government subsidies and incentives for solar installations."
+      },
+      "roi": {
+        "title": "Quick ROI",
+        "description": "Recover your investment in 3-5 years with long-term savings for decades."
+      },
+      "environment": {
+        "title": "Environmental Impact",
+        "description": "Reduce your carbon footprint and contribute to a cleaner, greener future."
+      },
+      "reliable": {
+        "title": "Reliable Power",
+        "description": "Ensure uninterrupted power supply with battery backup systems."
+      },
+      "value": {
+        "title": "Increased Property Value",
+        "description": "Solar installations can increase your property value by up to 4%."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "items": {
+      "first": {
+        "name": "Rajesh Kumar",
+        "location": "Mumbai, Maharashtra",
+        "text": "KRISHIVA INNOVATIVES transformed our factory's electrical system. Their expertise in HT/LT installations is unmatched. Professional, timely, and excellent quality work!"
+      },
+      "second": {
+        "name": "Priya Sharma",
+        "location": "Pune, Maharashtra",
+        "text": "The solar plant installation was seamless. The team was knowledgeable, and the commissioning was done perfectly. We're already seeing significant savings on our electricity bills."
+      },
+      "third": {
+        "name": "Amit Patel",
+        "location": "Ahmedabad, Gujarat",
+        "text": "Outstanding service! From consultation to final handover, everything was handled professionally. Their maintenance support is also excellent. Highly recommended!"
+      }
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Ready to Power Your Future?",
+    "description": "Contact us today for a free consultation and quote. Our team of experts is ready to help you with all your electrical and solar energy needs.",
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "John Doe",
+      "email": "Email Address",
+      "emailPlaceholder": "john@example.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+91 98765 43210",
+      "location": "Location",
+      "locationPlaceholder": "Mumbai, Maharashtra",
+      "message": "Your Message",
+      "messagePlaceholder": "Tell us about your project requirements...",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! We'll get back to you soon.",
+      "error": "Please fill in all required fields correctly."
+    },
+    "info": {
+      "phone": {
+        "title": "Phone",
+        "value": "+91 98765 43210"
+      },
+      "email": {
+        "title": "Email",
+        "value": "info@krishivainnovatives.com"
+      },
+      "address": {
+        "title": "Address",
+        "value": "Industrial Area, Phase 2, Mumbai, Maharashtra 400001"
+      }
+    },
+    "hours": {
+      "title": "Business Hours",
+      "weekdays": "Monday - Friday: 8:00 AM - 6:00 PM",
+      "saturday": "Saturday: 9:00 AM - 4:00 PM",
+      "sunday": "Sunday: Closed"
+    }
+  },
+  "footer": {
+    "tagline": "Powering Progress with Sustainable Electrical Solutions",
+    "quickLinks": "Quick Links",
+    "followUs": "Follow Us",
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Subscribe to get updates on our latest projects and offers.",
+      "placeholder": "Your email",
+      "button": "Subscribe"
+    },
+    "backToTop": "Back to Top",
+    "rights": "All rights reserved."
+  }
+}

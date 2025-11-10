@@ -1,31 +1,30 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sun } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import heroImage from "@/assets/hero-solar.jpg";
 import { useState, useEffect, useRef } from "react";
 
 const Hero = () => {
+  const { t } = useTranslation();
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [hasCounted, setHasCounted] = useState(false);
   const statsRef = useRef<HTMLDivElement>(null);
 
   // Relevant solar energy text array
   const energyTexts = [
-    "Clean Energy",
-    "Solar Power",
-    "Renewable Energy",
-    "Sustainable Living",
-    "Green Technology",
-    "Eco-Friendly Power",
-    "Smart Energy",
-    "Carbon Free Future",
+    t('hero.energyTexts.solar'),
+    t('hero.energyTexts.electrical'),
+    t('hero.energyTexts.innovation'),
+    t('hero.energyTexts.sustainability'),
   ];
 
   // Stats data with target values
   const statsData = [
-    { value: 50, suffix: "+", label: "Projects Completed", duration: 2000 },
-    { value: 15, suffix: "+", label: "Years Experience", duration: 1500 },
-    { value: 99, suffix: "%", label: "Customer Satisfaction", duration: 1800 },
+    { value: 500, suffix: "+", label: t('hero.stats.projects'), duration: 2000 },
+    { value: 2000, suffix: "+", label: t('hero.stats.clients'), duration: 1500 },
+    { value: 15, suffix: "+", label: t('hero.stats.experience'), duration: 1800 },
+    { value: 100, suffix: "+", label: t('hero.stats.capacity'), duration: 1800 },
   ];
 
   // Auto-rotate texts
@@ -205,7 +204,7 @@ const Hero = () => {
             variants={fadeUp}
             custom={0.2}
           >
-            Power Your Future with
+            {t('hero.title')}
             <div className="relative h-24 md:h-32 mt-2 overflow-hidden">
               <AnimatePresence mode="wait">
                 <motion.span
@@ -232,8 +231,7 @@ const Hero = () => {
             variants={fadeUp}
             custom={0.4}
           >
-            Transform your property with premium solar panel solutions. Save
-            money, reduce your carbon footprint, and embrace sustainable living.
+            {t('hero.description')}
           </motion.p>
 
           <motion.div
@@ -247,7 +245,7 @@ const Hero = () => {
                 size="lg"
                 className="bg-secondary hover:bg-secondary-light text-secondary-foreground font-semibold shadow-strong text-lg px-8 py-6 group"
               >
-                Get Free Quote
+                {t('hero.getStarted')}
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-smooth" />
               </Button>
             </motion.div>
@@ -263,7 +261,7 @@ const Hero = () => {
                 variant="outline"
                 className="bg-white/10 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-6"
               >
-                Our Services
+                {t('hero.learnMore')}
               </Button>
             </motion.div>
           </motion.div>

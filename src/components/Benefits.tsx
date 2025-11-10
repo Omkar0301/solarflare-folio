@@ -1,36 +1,49 @@
-import { DollarSign, Leaf, Shield, TrendingUp } from "lucide-react";
+import { DollarSign, Leaf, TrendingUp, Shield, Zap, Home } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Benefits = () => {
+  const { t } = useTranslation();
+  
   const benefits = [
     {
       icon: DollarSign,
-      title: "Cost Savings",
-      description:
-        "Reduce your electricity bills by up to 80% with solar energy. Most systems pay for themselves in 5-7 years.",
+      title: t('benefits.items.savings.title'),
+      description: t('benefits.items.savings.description'),
       color: "text-secondary",
       bgColor: "bg-secondary/10",
     },
     {
-      icon: Leaf,
-      title: "Eco-Friendly",
-      description:
-        "Lower your carbon footprint and contribute to a cleaner planet. Each installation prevents tons of CO₂ emissions.",
+      icon: Shield,
+      title: t('benefits.items.subsidy.title'),
+      description: t('benefits.items.subsidy.description'),
       color: "text-primary",
       bgColor: "bg-primary/10",
     },
     {
       icon: TrendingUp,
-      title: "Increase Property Value",
-      description:
-        "Solar installations increase home value by 4-6% on average, making it a smart long-term investment.",
+      title: t('benefits.items.roi.title'),
+      description: t('benefits.items.roi.description'),
       color: "text-accent",
       bgColor: "bg-accent/10",
     },
     {
-      icon: Shield,
-      title: "Energy Independence",
-      description:
-        "Generate your own electricity and protect yourself from rising energy costs and power outages.",
+      icon: Leaf,
+      title: t('benefits.items.environment.title'),
+      description: t('benefits.items.environment.description'),
+      color: "text-primary",
+      bgColor: "bg-primary/10",
+    },
+    {
+      icon: Zap,
+      title: t('benefits.items.reliable.title'),
+      description: t('benefits.items.reliable.description'),
+      color: "text-secondary",
+      bgColor: "bg-secondary/10",
+    },
+    {
+      icon: Home,
+      title: t('benefits.items.value.title'),
+      description: t('benefits.items.value.description'),
       color: "text-primary-dark",
       bgColor: "bg-primary/10",
     },
@@ -43,17 +56,13 @@ const Benefits = () => {
           {/* Header */}
           <div className="text-center mb-16 animate-slide-up">
             <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4">
-              Why Choose <span className="gradient-text">Solar Energy</span>
+              {t('benefits.title')}
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6" />
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Discover the compelling advantages of switching to solar power for
-              your home or business
-            </p>
           </div>
 
           {/* Benefits Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div
                 key={index}
@@ -73,34 +82,6 @@ const Benefits = () => {
                 </p>
               </div>
             ))}
-          </div>
-
-          {/* Stats Section */}
-          <div className="mt-16 bg-gradient-hero rounded-3xl p-8 md:p-12 text-white shadow-strong animate-scale-in">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="text-5xl font-bold text-secondary mb-2">
-                  25+
-                </div>
-                <div className="text-gray-800 font-medium">Years Warranty</div>
-              </div>
-              <div>
-                <div className="text-5xl font-bold text-secondary mb-2">
-                  30%
-                </div>
-                <div className="text-gray-800 font-medium">
-                  Federal Tax Credit
-                </div>
-              </div>
-              <div>
-                <div className="text-5xl font-bold text-secondary mb-2">
-                  ₹1,60,000+
-                </div>
-                <div className="text-gray-800 font-medium">
-                  Average Annual Savings
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

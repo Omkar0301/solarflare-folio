@@ -2,34 +2,30 @@ import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Testimonials = () => {
+  const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      location: 'Los Angeles, CA',
+      name: t('testimonials.items.first.name'),
+      location: t('testimonials.items.first.location'),
       rating: 5,
-      text: 'KRISHIVA INNOVATIVES completed our factory\'s HT cable installation ahead of schedule. Their team is highly professional and safety-conscious. Excellent work quality and attention to detail.',
+      text: t('testimonials.items.first.text'),
     },
     {
-      name: 'Michael Chen',
-      location: 'San Diego, CA',
+      name: t('testimonials.items.second.name'),
+      location: t('testimonials.items.second.location'),
       rating: 5,
-      text: 'Outstanding service from start to finish. They handled everything including permits and paperwork. Our business now runs on clean energy, and we\'re saving thousands annually.',
+      text: t('testimonials.items.second.text'),
     },
     {
-      name: 'Emily Rodriguez',
-      location: 'Phoenix, AZ',
+      name: t('testimonials.items.third.name'),
+      location: t('testimonials.items.third.location'),
       rating: 5,
-      text: 'Outstanding electrical contracting service for our residential project. KRISHIVA INNOVATIVES handled everything from wiring to panel installation with complete professionalism. Highly recommended!',
-    },
-    {
-      name: 'David Thompson',
-      location: 'San Francisco, CA',
-      rating: 5,
-      text: 'Professional, efficient, and trustworthy. The team installed our 12kW system in just two days. Five years later, it\'s still performing above expectations. Highly recommend!',
+      text: t('testimonials.items.third.text'),
     },
   ];
 
@@ -50,12 +46,9 @@ const Testimonials = () => {
           {/* Header */}
           <div className="text-center mb-16 animate-slide-up">
             <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4">
-              Client <span className="gradient-text">Testimonials</span>
+              {t('testimonials.title')}
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6" />
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Hear what our satisfied customers have to say about their solar experience
-            </p>
           </div>
 
           {/* Testimonial Card */}

@@ -1,40 +1,27 @@
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { useTranslation } from 'react-i18next';
 import project1 from '@/assets/project-1.jpg';
 import project2 from '@/assets/project-2.jpg';
 
 const Portfolio = () => {
+  const { t } = useTranslation();
+  
   const projects = [
     {
-      title: 'Modern Residential Installation',
-      category: 'Residential',
-      capacity: '10 kW System',
-      location: 'Los Angeles, CA',
-      description: 'Complete solar panel installation for a luxury home, generating 100% of energy needs.',
+      title: t('portfolio.projects.solar.title'),
+      category: t('portfolio.projects.solar.category'),
+      capacity: t('portfolio.projects.solar.capacity'),
+      location: t('portfolio.projects.solar.location'),
+      description: t('portfolio.projects.solar.description'),
       image: project1,
     },
     {
-      title: 'Commercial Office Complex',
-      category: 'Commercial',
-      capacity: '50 kW System',
-      location: 'San Diego, CA',
-      description: 'Large-scale solar array for corporate office building, reducing energy costs by 75%.',
-      image: project2,
-    },
-    {
-      title: 'Eco-Friendly Villa',
-      category: 'Residential',
-      capacity: '8 kW System',
-      location: 'San Francisco, CA',
-      description: 'Sustainable energy solution integrated with smart home technology.',
-      image: project1,
-    },
-    {
-      title: 'Industrial Warehouse',
-      category: 'Industrial',
-      capacity: '100 kW System',
-      location: 'Phoenix, AZ',
-      description: 'Massive solar installation powering manufacturing operations.',
+      title: t('portfolio.projects.industrial.title'),
+      category: t('portfolio.projects.industrial.category'),
+      capacity: t('portfolio.projects.industrial.capacity'),
+      location: t('portfolio.projects.industrial.location'),
+      description: t('portfolio.projects.industrial.description'),
       image: project2,
     },
   ];
@@ -46,11 +33,11 @@ const Portfolio = () => {
           {/* Header */}
           <div className="text-center mb-16 animate-slide-up">
             <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4">
-              Our <span className="gradient-text">Portfolio</span>
+              {t('portfolio.title')}
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6" />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore our successful solar installations across residential, commercial, and industrial properties
+              {t('portfolio.subtitle')}
             </p>
           </div>
 

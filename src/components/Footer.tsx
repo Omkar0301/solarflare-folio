@@ -1,8 +1,11 @@
 import { Facebook, Twitter, Instagram, Linkedin, ArrowUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useTranslation } from 'react-i18next';
 import logoImage from '@/assets/logo.png';
 
 const Footer = () => {
+  const { t } = useTranslation();
+  
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -10,12 +13,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Services', href: '#services' },
-    { label: 'Portfolio', href: '#portfolio' },
-    { label: 'Testimonials', href: '#testimonials' },
-    { label: 'Contact', href: '#contact' },
+    { label: t('nav.home'), href: '#home' },
+    { label: t('nav.about'), href: '#about' },
+    { label: t('nav.services'), href: '#services' },
+    { label: t('nav.portfolio'), href: '#portfolio' },
+    { label: t('nav.testimonials'), href: '#testimonials' },
+    { label: t('nav.contact'), href: '#contact' },
   ];
 
   const socialLinks = [
@@ -32,7 +35,7 @@ const Footer = () => {
         onClick={scrollToTop}
         size="icon"
         className="fixed bottom-8 right-8 rounded-full shadow-strong bg-primary hover:bg-primary-dark text-primary-foreground z-40 w-12 h-12"
-        aria-label="Back to top"
+        aria-label={t('footer.backToTop')}
       >
         <ArrowUp className="w-5 h-5" />
       </Button>
@@ -45,12 +48,10 @@ const Footer = () => {
               <img 
                 src={logoImage} 
                 alt="Krishiva Innovatives" 
-                className="h-12 w-auto" // Adjust height as needed
+                className="h-12 w-auto"
                 onError={(e) => {
-                  // Fallback if image fails to load
                   const target = e.target as HTMLImageElement;
                   target.style.display = 'none';
-                  // Fallback text
                   const fallback = document.createElement('div');
                   fallback.className = 'flex items-center space-x-2';
                   fallback.innerHTML = `
@@ -62,20 +63,18 @@ const Footer = () => {
               />
             </div>
             <p className="text-background/80 mb-4 leading-relaxed">
-              Leading electrical contracting company providing expert services in HT/LT cable installation, 
-              solar plants, industrial solutions, and residential wiring. Government-approved contractors 
-              committed to quality and safety.
+              {t('footer.tagline')}
             </p>
             <div className="space-y-2 text-background/80">
-              <p>📍 Industrial Area, Phase 2, Mumbai, Maharashtra 400001</p>
-              <p>📞 +91 (022) 1234-5678</p>
-              <p>✉️ info@krishivainnovatives.com</p>
+              <p>📍 {t('contact.info.address.value')}</p>
+              <p>📞 {t('contact.info.phone.value')}</p>
+              <p>✉️ {t('contact.info.email.value')}</p>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading font-semibold text-lg mb-4">Quick Links</h4>
+            <h4 className="font-heading font-semibold text-lg mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
@@ -92,7 +91,7 @@ const Footer = () => {
 
           {/* Social Media */}
           <div>
-            <h4 className="font-heading font-semibold text-lg mb-4">Follow Us</h4>
+            <h4 className="font-heading font-semibold text-lg mb-4">{t('footer.followUs')}</h4>
             <div className="flex gap-3">
               {socialLinks.map((social) => (
                 <a
@@ -108,18 +107,18 @@ const Footer = () => {
               ))}
             </div>
             <div className="mt-6">
-              <h5 className="font-semibold mb-2">Newsletter</h5>
+              <h5 className="font-semibold mb-2">{t('footer.newsletter.title')}</h5>
               <p className="text-background/80 text-sm mb-3">
-                Subscribe for solar tips and updates
+                {t('footer.newsletter.description')}
               </p>
               <div className="flex gap-2">
                 <input
                   type="email"
-                  placeholder="Your email"
+                  placeholder={t('footer.newsletter.placeholder')}
                   className="flex-1 px-3 py-2 rounded-lg bg-background/10 border border-background/20 text-background placeholder:text-background/50 focus:outline-none focus:border-secondary"
                 />
                 <Button size="sm" className="bg-secondary hover:bg-secondary-light text-secondary-foreground">
-                  Join
+                  {t('footer.newsletter.button')}
                 </Button>
               </div>
             </div>
@@ -129,7 +128,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-background/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-background/70 text-sm">
-            <p>© {currentYear} KRISHIVA INNOVATIVES. All rights reserved.</p>
+            <p>© {currentYear} KRISHIVA INNOVATIVES. {t('footer.rights')}</p>
             <p>
               Designed with ❤️ by{' '}
               <span className="text-secondary font-medium">Omkar Vaidya</span>

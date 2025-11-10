@@ -1,26 +1,29 @@
-import { Award, Users, Leaf, Zap } from "lucide-react";
+import { Award, Users, ShieldCheck, Headphones } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
+  
   const features = [
     {
       icon: Award,
-      title: "Certified Experts",
-      description: "Licensed professionals with 15+ years of experience",
+      title: t('about.features.experience.title'),
+      description: t('about.features.experience.description'),
     },
     {
-      icon: Users,
-      title: "Customer First",
-      description: "Dedicated support from consultation to maintenance",
+      icon: ShieldCheck,
+      title: t('about.features.certified.title'),
+      description: t('about.features.certified.description'),
     },
     {
-      icon: Leaf,
-      title: "Eco-Friendly",
-      description: "Committed to sustainable and green solutions",
+      icon: Award,
+      title: t('about.features.quality.title'),
+      description: t('about.features.quality.description'),
     },
     {
-      icon: Zap,
-      title: "High Efficiency",
-      description: "Premium solar panels with maximum energy output",
+      icon: Headphones,
+      title: t('about.features.support.title'),
+      description: t('about.features.support.description'),
     },
   ];
 
@@ -31,14 +34,11 @@ const About = () => {
           {/* Header */}
           <div className="text-center mb-16 animate-slide-up">
             <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4">
-              About <span className="gradient-text">KRISHIVA INNOVATIVES</span>
+              {t('about.companyName')}
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6" />
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              For over 15 years, we've been at the forefront of renewable energy
-              solutions, helping homeowners and businesses transition to clean,
-              sustainable solar power. Our mission is to make solar energy
-              accessible, affordable, and efficient for everyone.
+              {t('about.intro')}
             </p>
           </div>
 
@@ -46,13 +46,10 @@ const About = () => {
           <div className="bg-gradient-hero text-gray-900 rounded-3xl p-8 md:p-12 mb-12 shadow-strong animate-scale-in">
             <div className="max-w-3xl mx-auto text-center">
               <h3 className="font-heading font-bold text-3xl mb-4">
-                Our Vision
+                {t('about.vision')}
               </h3>
               <p className="text-lg leading-relaxed text-gray-800">
-                We envision a world powered by clean, renewable energy where
-                every property harnesses the sun's potential. Through innovative
-                technology and expert craftsmanship, we're building a
-                sustainable future, one solar panel at a time.
+                {t('about.visionText')}
               </p>
             </div>
           </div>
