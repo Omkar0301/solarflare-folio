@@ -206,21 +206,21 @@ const Hero = () => {
       </motion.div>
 
       {/* Main Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20 text-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-16 sm:py-20 text-center">
         <motion.div
-          className="max-w-4xl mx-auto space-y-8"
+          className="max-w-4xl mx-auto space-y-6 sm:space-y-8"
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
         >
           <motion.h1
-            className="font-heading font-bold text-5xl md:text-7xl text-white leading-tight"
+            className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight"
             variants={fadeUp}
             custom={0.2}
           >
             {t("hero.title")}
-            <div className="h-4 md:h-6"></div>
-            <div className="relative h-24 md:h-32 mt-2 overflow-hidden">
+            <div className="h-3 sm:h-4 md:h-6"></div>
+            <div className="relative h-20 sm:h-24 md:h-28 lg:h-32 mt-2 overflow-hidden">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={currentTextIndex}
@@ -242,7 +242,7 @@ const Hero = () => {
           </motion.h1>
 
           <motion.p
-            className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed px-4"
             variants={fadeUp}
             custom={0.4}
           >
@@ -250,7 +250,7 @@ const Hero = () => {
           </motion.p>
 
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-4 sm:pt-6"
             variants={fadeUp}
             custom={0.6}
           >
@@ -258,7 +258,7 @@ const Hero = () => {
               <Button
                 onClick={scrollToContact}
                 size="lg"
-                className="bg-secondary hover:bg-secondary-light text-secondary-foreground font-semibold shadow-strong text-lg px-8 py-6 group"
+                className="bg-secondary hover:bg-secondary-light text-secondary-foreground font-semibold shadow-strong text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 group w-full sm:w-auto"
               >
                 {t("hero.getStarted")}
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-smooth" />
@@ -274,7 +274,7 @@ const Hero = () => {
                 }}
                 size="lg"
                 variant="outline"
-                className="bg-white/10 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-6"
+                className="bg-white/10 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-primary text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 w-full sm:w-auto"
               >
                 {t("hero.learnMore")}
               </Button>
@@ -284,7 +284,7 @@ const Hero = () => {
           {/* Stats Section */}
           <motion.div
             ref={statsRef}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16 max-w-3xl mx-auto"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-12 sm:pt-16 max-w-3xl mx-auto px-4"
             variants={staggerContainer}
           >
             {statsData.map((stat, index) => (
@@ -296,9 +296,9 @@ const Hero = () => {
                   scale: 1.05,
                   boxShadow: "0 0 20px rgba(255,255,255,0.3)",
                 }}
-                className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-glow"
+                className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20 shadow-glow"
               >
-                <div className="text-4xl md:text-5xl font-bold text-secondary mb-2">
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-secondary mb-2">
                   <Counter
                     value={stat.value}
                     suffix={stat.suffix}
@@ -306,7 +306,7 @@ const Hero = () => {
                     delay={index * 300} // Stagger the counter animations
                   />
                 </div>
-                <div className="text-white/90 font-medium">{stat.label}</div>
+                <div className="text-white/90 font-medium text-sm sm:text-base">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>

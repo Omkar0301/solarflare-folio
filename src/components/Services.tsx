@@ -80,12 +80,12 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="services" className="py-16 sm:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16 animate-slide-up">
-            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4">
+          <div className="text-center mb-12 sm:mb-16 animate-slide-up">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl mb-4">
               {t('services.title')}
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6" />
@@ -95,7 +95,7 @@ const Services = () => {
           </div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             {services.map((service, index) => (
               <Card
                 key={index}
@@ -103,20 +103,20 @@ const Services = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Image */}
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-smooth duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-60 group-hover:opacity-80 transition-smooth" />
-                  <h3 className="absolute bottom-4 left-4 font-heading font-bold text-2xl text-white">
+                  <h3 className="absolute bottom-4 left-4 font-heading font-bold text-xl sm:text-2xl text-white">
                     {service.title}
                   </h3>
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
+                <div className="p-4 sm:p-6">
                   <p className="text-muted-foreground mb-4 leading-relaxed">
                     {service.description}
                   </p>

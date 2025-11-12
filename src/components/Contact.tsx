@@ -96,12 +96,12 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-16 sm:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16 animate-slide-up">
-            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4">
+          <div className="text-center mb-12 sm:mb-16 animate-slide-up">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl mb-4">
               {t('contact.title')}
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6" />
@@ -110,11 +110,11 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Contact Form */}
-            <Card className="lg:col-span-2 p-8 shadow-strong border-0 animate-scale-in">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card className="lg:col-span-2 p-6 sm:p-8 shadow-strong border-0 animate-scale-in">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <label
                       htmlFor="name"
@@ -153,7 +153,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <label
                       htmlFor="phone"
@@ -213,17 +213,17 @@ const Contact = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-primary hover:bg-primary-dark text-primary-foreground shadow-glow text-lg py-6 group"
+                  className="w-full bg-primary hover:bg-primary-dark text-primary-foreground shadow-glow text-base sm:text-lg py-5 sm:py-6 group"
                 >
                   {isSubmitting ? t('contact.form.sending') : t('contact.form.submit')}
-                  <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-smooth" />
+                  <Send className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-smooth" />
                 </Button>
               </form>
             </Card>
 
             {/* Contact Information */}
             <div
-              className="space-y-6 animate-slide-up"
+              className="space-y-4 sm:space-y-6 animate-slide-up"
               style={{ animationDelay: "0.2s" }}
             >
               {contactInfo.map((info, index) => (
@@ -234,16 +234,16 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="block"
                 >
-                  <Card className="p-6 shadow-card hover:shadow-strong transition-smooth group cursor-pointer border-0">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-bounce">
-                        <info.icon className="w-6 h-6 text-primary" />
+                  <Card className="p-4 sm:p-6 shadow-card hover:shadow-strong transition-smooth group cursor-pointer border-0">
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-bounce">
+                        <info.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-heading font-semibold text-lg mb-1 group-hover:text-primary transition-smooth">
+                        <h4 className="font-heading font-semibold text-base sm:text-lg mb-1 group-hover:text-primary transition-smooth">
                           {info.title}
                         </h4>
-                        <p className="text-muted-foreground">{info.content}</p>
+                        <p className="text-muted-foreground text-sm sm:text-base break-words">{info.content}</p>
                       </div>
                     </div>
                   </Card>
@@ -251,11 +251,11 @@ const Contact = () => {
               ))}
 
               {/* Business Hours */}
-              <Card className="p-6 bg-gradient-hero text-gray-900 shadow-strong border-0">
-                <h4 className="font-heading font-semibold text-lg mb-4">
+              <Card className="p-4 sm:p-6 bg-gradient-hero text-gray-900 shadow-strong border-0">
+                <h4 className="font-heading font-semibold text-base sm:text-lg mb-3 sm:mb-4">
                   {t('contact.hours.title')}
                 </h4>
-                <div className="space-y-2 text-gray-800">
+                <div className="space-y-2 text-gray-800 text-sm sm:text-base">
                   <div className="flex justify-between">
                     <span>{t('contact.hours.weekdays').split(':')[0]}</span>
                     <span className="font-semibold">{t('contact.hours.weekdays').split(':')[1]}</span>

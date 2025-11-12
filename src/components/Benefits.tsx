@@ -50,23 +50,23 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section className="py-16 sm:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16 animate-slide-up">
-            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4">
+          <div className="text-center mb-12 sm:mb-16 animate-slide-up">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl mb-4">
               {t('benefits.title')}
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6" />
           </div>
 
           {/* Benefits Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="group bg-card rounded-2xl p-6 shadow-card hover:shadow-strong transition-smooth cursor-pointer animate-slide-up"
+                className="group bg-card rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-card hover:shadow-strong transition-smooth cursor-pointer animate-slide-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div

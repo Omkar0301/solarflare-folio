@@ -40,43 +40,43 @@ const Testimonials = () => {
   const current = testimonials[currentIndex];
 
   return (
-    <section id="testimonials" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
+    <section id="testimonials" className="py-16 sm:py-20 bg-muted/30">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16 animate-slide-up">
-            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4">
+          <div className="text-center mb-12 sm:mb-16 animate-slide-up">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl mb-4">
               {t('testimonials.title')}
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6" />
           </div>
 
           {/* Testimonial Card */}
-          <Card className="relative p-8 md:p-12 shadow-strong border-0 animate-scale-in">
+          <Card className="relative p-6 sm:p-8 lg:p-12 shadow-strong border-0 animate-scale-in">
             {/* Quote Icon */}
-            <div className="absolute top-6 right-6 text-primary/10">
-              <Quote size={80} />
+            <div className="absolute top-4 sm:top-6 right-4 sm:right-6 text-primary/10">
+              <Quote size={60} className="sm:w-20 sm:h-20" />
             </div>
 
             {/* Rating */}
-            <div className="flex gap-1 mb-6">
+            <div className="flex gap-1 mb-4 sm:mb-6">
               {[...Array(current.rating)].map((_, i) => (
-                <Star key={i} className="w-6 h-6 fill-secondary text-secondary" />
+                <Star key={i} className="w-5 h-5 sm:w-6 sm:h-6 fill-secondary text-secondary" />
               ))}
             </div>
 
             {/* Testimonial Text */}
-            <blockquote className="text-xl md:text-2xl text-foreground leading-relaxed mb-8 relative z-10">
+            <blockquote className="text-lg sm:text-xl lg:text-2xl text-foreground leading-relaxed mb-6 sm:mb-8 relative z-10">
               "{current.text}"
             </blockquote>
 
             {/* Author Info */}
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
-                <div className="font-heading font-semibold text-xl text-primary mb-1">
+                <div className="font-heading font-semibold text-lg sm:text-xl text-primary mb-1">
                   {current.name}
                 </div>
-                <div className="text-muted-foreground">📍 {current.location}</div>
+                <div className="text-muted-foreground text-sm sm:text-base">📍 {current.location}</div>
               </div>
 
               {/* Navigation Buttons */}

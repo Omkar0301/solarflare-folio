@@ -28,12 +28,12 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
+    <section id="about" className="py-16 sm:py-20 bg-muted/30">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16 animate-slide-up">
-            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4">
+          <div className="text-center mb-12 sm:mb-16 animate-slide-up">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl mb-4">
               {t('about.companyName')}
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6" />
@@ -43,9 +43,9 @@ const About = () => {
           </div>
 
           {/* Mission Statement */}
-          <div className="bg-gradient-hero text-gray-900 rounded-3xl p-8 md:p-12 mb-12 shadow-strong animate-scale-in">
+          <div className="bg-gradient-hero text-gray-900 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 mb-8 sm:mb-12 shadow-strong animate-scale-in">
             <div className="max-w-3xl mx-auto text-center">
-              <h3 className="font-heading font-bold text-3xl mb-4">
+              <h3 className="font-heading font-bold text-2xl sm:text-3xl mb-4">
                 {t('about.vision')}
               </h3>
               <p className="text-lg leading-relaxed text-gray-800">
@@ -55,7 +55,7 @@ const About = () => {
           </div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {features.map((feature, index) => (
               <div
                 key={index}

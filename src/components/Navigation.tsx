@@ -52,14 +52,14 @@ const Navigation = () => {
         isScrolled ? 'bg-background/95 backdrop-blur-md shadow-card' : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo with Image */}
           <a href="#home" className="flex items-center space-x-2">
             <img 
               src={logoImage} 
               alt="Krishiva Innovatives" 
-              className="h-10 w-auto" // Adjust height as needed
+              className="h-8 sm:h-10 lg:h-12 w-auto" // Responsive logo size
               onError={(e) => {
                 // Fallback if image fails to load
                 const target = e.target as HTMLImageElement;
@@ -70,13 +70,13 @@ const Navigation = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden lg:flex items-center space-x-1">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className="px-4 py-2 text-foreground hover:text-primary transition-smooth font-medium"
+                className="px-3 xl:px-4 py-2 text-sm xl:text-base text-foreground hover:text-primary transition-smooth font-medium"
               >
                 {link.label}
               </a>
@@ -84,7 +84,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center space-x-2">
+          <div className="hidden lg:flex items-center space-x-2">
             {/* Language Switcher */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -124,7 +124,7 @@ const Navigation = () => {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-foreground hover:text-primary transition-smooth"
+            className="lg:hidden p-2 text-foreground hover:text-primary transition-smooth"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -133,7 +133,7 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 animate-slide-up">
+          <div className="lg:hidden py-4 animate-slide-up">
             <div className="flex flex-col space-y-2">
               {navLinks.map((link) => (
                 <a
