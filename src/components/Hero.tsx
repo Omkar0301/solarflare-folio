@@ -13,18 +13,32 @@ const Hero = () => {
 
   // Relevant solar energy text array
   const energyTexts = [
-    t('hero.energyTexts.solar'),
-    t('hero.energyTexts.electrical'),
-    t('hero.energyTexts.innovation'),
-    t('hero.energyTexts.sustainability'),
+    t("hero.energyTexts.solar"),
+    t("hero.energyTexts.electrical"),
+    t("hero.energyTexts.innovation"),
+    t("hero.energyTexts.sustainability"),
   ];
 
   // Stats data with target values
   const statsData = [
-    { value: 500, suffix: "+", label: t('hero.stats.projects'), duration: 2000 },
-    { value: 2000, suffix: "+", label: t('hero.stats.clients'), duration: 1500 },
-    { value: 15, suffix: "+", label: t('hero.stats.experience'), duration: 1800 },
-    { value: 100, suffix: "+", label: t('hero.stats.capacity'), duration: 1800 },
+    {
+      value: 50,
+      suffix: "+",
+      label: t("hero.stats.projects"),
+      duration: 2000,
+    },
+    {
+      value: 20,
+      suffix: "+",
+      label: t("hero.stats.clients"),
+      duration: 1500,
+    },
+    {
+      value: 15,
+      suffix: "+",
+      label: t("hero.stats.experience"),
+      duration: 1800,
+    },
   ];
 
   // Auto-rotate texts
@@ -204,7 +218,8 @@ const Hero = () => {
             variants={fadeUp}
             custom={0.2}
           >
-            {t('hero.title')}
+            {t("hero.title")}
+            <div className="h-4 md:h-6"></div>
             <div className="relative h-24 md:h-32 mt-2 overflow-hidden">
               <AnimatePresence mode="wait">
                 <motion.span
@@ -218,7 +233,7 @@ const Hero = () => {
                     opacity: { duration: 0.4 },
                     scale: { duration: 0.3 },
                   }}
-                  className="absolute inset-0 text-secondary block"
+                  className="absolute inset-0 text-secondary block py-2 md:py-3"
                 >
                   {energyTexts[currentTextIndex]}
                 </motion.span>
@@ -231,7 +246,7 @@ const Hero = () => {
             variants={fadeUp}
             custom={0.4}
           >
-            {t('hero.description')}
+            {t("hero.description")}
           </motion.p>
 
           <motion.div
@@ -245,7 +260,7 @@ const Hero = () => {
                 size="lg"
                 className="bg-secondary hover:bg-secondary-light text-secondary-foreground font-semibold shadow-strong text-lg px-8 py-6 group"
               >
-                {t('hero.getStarted')}
+                {t("hero.getStarted")}
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-smooth" />
               </Button>
             </motion.div>
@@ -261,7 +276,7 @@ const Hero = () => {
                 variant="outline"
                 className="bg-white/10 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-6"
               >
-                {t('hero.learnMore')}
+                {t("hero.learnMore")}
               </Button>
             </motion.div>
           </motion.div>
