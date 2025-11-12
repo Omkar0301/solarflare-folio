@@ -41,10 +41,10 @@ const Footer = () => {
       </Button>
 
       <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 md:mb-8">
           {/* Company Info */}
-          <div className="sm:col-span-2 lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-3 sm:mb-4">
+          <div className="sm:col-span-2 md:col-span-2">
+            <div className="flex items-center space-x-2 mb-3 md:mb-4">
               <img 
                 src={logoImage} 
                 alt="Krishiva Innovatives" 
@@ -62,10 +62,10 @@ const Footer = () => {
                 }}
               />
             </div>
-            <p className="text-background/80 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base">
+            <p className="text-background/80 mb-3 md:mb-4 leading-relaxed text-sm md:text-base">
               {t('footer.tagline')}
             </p>
-            <div className="space-y-2 text-background/80 text-sm sm:text-base">
+            <div className="space-y-2 text-background/80 text-sm md:text-base">
               <p>📍 {t('contact.info.address.value')}</p>
               <p>📞 {t('contact.info.phone.value')}</p>
               <p>✉️ {t('contact.info.email.value')}</p>
@@ -74,8 +74,8 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading font-semibold text-base sm:text-lg mb-3 sm:mb-4">{t('footer.quickLinks')}</h4>
-            <ul className="space-y-2 text-sm sm:text-base">
+            <h4 className="font-heading font-semibold text-base md:text-lg mb-3 md:mb-4">{t('footer.quickLinks')}</h4>
+            <ul className="space-y-2 text-sm md:text-base">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <a
@@ -91,7 +91,7 @@ const Footer = () => {
 
           {/* Social Media */}
           <div>
-            <h4 className="font-heading font-semibold text-base sm:text-lg mb-3 sm:mb-4">{t('footer.followUs')}</h4>
+            <h4 className="font-heading font-semibold text-base md:text-lg mb-3 md:mb-4">{t('footer.followUs')}</h4>
             <div className="flex gap-3">
               {socialLinks.map((social) => (
                 <a
@@ -106,18 +106,18 @@ const Footer = () => {
                 </a>
               ))}
             </div>
-            <div className="mt-4 sm:mt-6">
-              <h5 className="font-semibold mb-2 text-sm sm:text-base">{t('footer.newsletter.title')}</h5>
-              <p className="text-background/80 text-xs sm:text-sm mb-2 sm:mb-3">
+            <div className="mt-4 md:mt-6">
+              <h5 className="font-semibold mb-2 text-sm md:text-base">{t('footer.newsletter.title')}</h5>
+              <p className="text-background/80 text-xs md:text-sm mb-2 md:mb-3">
                 {t('footer.newsletter.description')}
               </p>
-              <div className="flex flex-col sm:flex-row gap-2">
+              <div className="flex flex-col md:flex-row gap-2">
                 <input
                   type="email"
                   placeholder={t('footer.newsletter.placeholder')}
                   className="flex-1 px-3 py-2 text-sm rounded-lg bg-background/10 border border-background/20 text-background placeholder:text-background/50 focus:outline-none focus:border-secondary"
                 />
-                <Button size="sm" className="bg-secondary hover:bg-secondary-light text-secondary-foreground text-xs sm:text-sm whitespace-nowrap">
+                <Button size="sm" className="bg-secondary hover:bg-secondary-light text-secondary-foreground text-xs md:text-sm whitespace-nowrap">
                   {t('footer.newsletter.button')}
                 </Button>
               </div>
@@ -126,8 +126,8 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-background/20 pt-6 sm:pt-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-background/70 text-xs sm:text-sm text-center">
+        <div className="border-t border-background/20 pt-6 md:pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4 text-background/70 text-xs md:text-sm text-center">
             <p>© {currentYear} KRISHIVA INNOVATIVES. {t('footer.rights')}</p>
             <p>
               Designed with ❤️ by{' '}

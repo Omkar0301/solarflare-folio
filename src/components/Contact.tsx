@@ -110,11 +110,11 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {/* Contact Form */}
-            <Card className="lg:col-span-2 p-6 sm:p-8 shadow-strong border-0 animate-scale-in">
-              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            <Card className="md:col-span-2 p-6 md:p-8 shadow-strong border-0 animate-scale-in">
+              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
                   <div>
                     <label
                       htmlFor="name"
@@ -153,7 +153,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
                   <div>
                     <label
                       htmlFor="phone"
@@ -223,7 +223,7 @@ const Contact = () => {
 
             {/* Contact Information */}
             <div
-              className="space-y-4 sm:space-y-6 animate-slide-up"
+              className="space-y-4 md:space-y-6 animate-slide-up"
               style={{ animationDelay: "0.2s" }}
             >
               {contactInfo.map((info, index) => (
