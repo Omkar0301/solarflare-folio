@@ -27,7 +27,8 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-16 sm:py-20 bg-muted/30">
+    <section id="portfolio" className="py-16 sm:py-20 gradient-muted relative">
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -46,7 +47,7 @@ const Portfolio = () => {
             {projects.map((project, index) => (
               <Card
                 key={index}
-                className="overflow-hidden group cursor-pointer hover:shadow-strong transition-smooth border-0 shadow-card animate-scale-in"
+                className="overflow-hidden group cursor-pointer hover:shadow-strong transition-smooth border-border/40 shadow-soft bg-card/90 backdrop-blur-sm animate-scale-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Image */}

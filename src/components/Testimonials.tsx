@@ -40,7 +40,8 @@ const Testimonials = () => {
   const current = testimonials[currentIndex];
 
   return (
-    <section id="testimonials" className="py-16 sm:py-20 bg-muted/30">
+    <section id="testimonials" className="py-16 sm:py-20 bg-muted/20 relative">
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
@@ -52,7 +53,7 @@ const Testimonials = () => {
           </div>
 
           {/* Testimonial Card */}
-          <Card className="relative p-6 sm:p-8 lg:p-12 shadow-strong border-0 animate-scale-in">
+          <Card className="relative p-6 sm:p-8 lg:p-12 shadow-soft border-border/40 bg-card/90 backdrop-blur-sm animate-scale-in hover:shadow-strong transition-smooth">
             {/* Quote Icon */}
             <div className="absolute top-4 sm:top-6 right-4 sm:right-6 text-primary/10">
               <Quote size={60} className="sm:w-20 sm:h-20" />

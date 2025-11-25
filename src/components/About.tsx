@@ -28,7 +28,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-16 sm:py-20 bg-muted/30">
+    <section id="about" className="py-16 sm:py-20 gradient-subtle wave-divider">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -43,8 +43,9 @@ const About = () => {
           </div>
 
           {/* Mission Statement */}
-          <div className="bg-gradient-hero text-gray-900 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 mb-8 sm:mb-12 shadow-strong animate-scale-in">
-            <div className="max-w-3xl mx-auto text-center">
+          <div className="bg-gradient-hero text-gray-900 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 mb-8 sm:mb-12 shadow-strong animate-scale-in relative overflow-hidden">
+            <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />
+            <div className="max-w-3xl mx-auto text-center relative z-10">
               <h3 className="font-heading font-bold text-2xl sm:text-3xl mb-4">
                 {t('about.vision')}
               </h3>

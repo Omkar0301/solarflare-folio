@@ -51,11 +51,14 @@ All colors MUST be HSL.
     --gradient-solar: linear-gradient(135deg, hsl(45 95% 55%), hsl(35 90% 60%));
     --gradient-sky: linear-gradient(180deg, hsl(200 85% 55%), hsl(195 75% 65%));
     --gradient-hero: linear-gradient(135deg, hsl(160 70% 35%) 0%, hsl(200 85% 55%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(160 15% 98%));
+    --gradient-muted: linear-gradient(135deg, hsl(160 10% 97%), hsl(200 15% 97%));
     
     /* Shadows */
     --shadow-glow: 0 10px 40px -10px hsl(160 70% 35% / 0.3);
     --shadow-card: 0 4px 20px -2px hsl(160 20% 15% / 0.1);
     --shadow-strong: 0 20px 50px -10px hsl(160 20% 15% / 0.2);
+    --shadow-soft: 0 2px 15px -3px hsl(160 20% 15% / 0.08);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -181,6 +184,36 @@ All colors MUST be HSL.
 
   .transition-bounce {
     transition: var(--transition-bounce);
+  }
+
+  .gradient-subtle {
+    background-image: var(--gradient-subtle);
+  }
+
+  .gradient-muted {
+    background-image: var(--gradient-muted);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .section-divider {
+    @apply relative;
+  }
+
+  .section-divider::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-primary/20 rounded-full;
+  }
+
+  .wave-divider {
+    @apply relative overflow-hidden;
+  }
+
+  .wave-divider::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-background to-transparent;
   }
 }
 

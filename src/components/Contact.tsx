@@ -96,7 +96,8 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-16 sm:py-20 bg-background">
+    <section id="contact" className="py-16 sm:py-20 gradient-subtle relative">
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -112,7 +113,7 @@ const Contact = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {/* Contact Form */}
-            <Card className="md:col-span-2 p-6 md:p-8 shadow-strong border-0 animate-scale-in">
+            <Card className="md:col-span-2 p-6 md:p-8 shadow-soft border-border/40 bg-card/90 backdrop-blur-sm animate-scale-in">
               <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
                   <div>
@@ -234,7 +235,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="block"
                 >
-                  <Card className="p-4 sm:p-6 shadow-card hover:shadow-strong transition-smooth group cursor-pointer border-0">
+                  <Card className="p-4 sm:p-6 shadow-soft hover:shadow-strong transition-smooth group cursor-pointer border-border/40 bg-card/80 backdrop-blur-sm">
                     <div className="flex items-start gap-3 sm:gap-4">
                       <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-bounce">
                         <info.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
