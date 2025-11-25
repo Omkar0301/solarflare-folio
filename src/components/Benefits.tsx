@@ -50,8 +50,9 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="py-16 sm:py-20 bg-background">
-      <div className="container mx-auto px-4 sm:px-6">
+    <section className="py-16 sm:py-20 bg-background relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-secondary/5 pointer-events-none" />
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12 sm:mb-16 animate-slide-up">
@@ -66,7 +67,7 @@ const Benefits = () => {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="group bg-card rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-card hover:shadow-strong transition-smooth cursor-pointer animate-slide-up"
+                className="group bg-card/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-soft hover:shadow-strong transition-smooth cursor-pointer animate-slide-up border border-border/30"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div

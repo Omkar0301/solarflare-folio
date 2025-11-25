@@ -80,8 +80,9 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-16 sm:py-20 bg-background">
-      <div className="container mx-auto px-4 sm:px-6">
+    <section id="services" className="py-16 sm:py-20 bg-background relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12 sm:mb-16 animate-slide-up">
@@ -99,7 +100,7 @@ const Services = () => {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="overflow-hidden group cursor-pointer hover:shadow-strong transition-smooth border-0 shadow-card animate-scale-in"
+                className="overflow-hidden group cursor-pointer hover:shadow-strong transition-smooth border-border/50 shadow-soft bg-card/80 backdrop-blur-sm animate-scale-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Image */}
