@@ -231,6 +231,108 @@
       "sunday": "Sunday: Closed"
     }
   },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Clear answers about rooftop solar, maintenance, and savings with Krishiva Innovatives.",
+    "tabs": {
+      "general": "General Questions",
+      "maintenance": "Solar Maintenance",
+      "economics": "Solar Economics"
+    },
+    "items": {
+      "general": {
+        "q1": {
+          "question": "Who is Krishiva Innovatives and what do you offer?",
+          "answer": "Krishiva Innovatives is a solar EPC company focused on rooftop solar.\nWe design, install, and maintain solar systems for homes and businesses.\nOur team manages survey, engineering, installation, and commissioning.\nWe also guide you on paperwork, subsidies, and long-term service support."
+        },
+        "q2": {
+          "question": "What is a rooftop solar power system?",
+          "answer": "A rooftop solar system is a set of solar panels fixed on your roof.\nThe panels convert sunlight into usable electricity for your property.\nIt includes an inverter, mounting structures, wiring, and safety devices.\nThe system can be grid-connected, hybrid, or off-grid depending on need."
+        },
+        "q3": {
+          "question": "How does a rooftop solar system work every day?",
+          "answer": "Solar panels absorb sunlight and generate DC electricity.\nAn inverter converts this DC power into AC power for your appliances.\nYour home first uses solar power, and then draws from the grid if needed.\nAny extra power can be exported to the grid under net metering policies."
+        },
+        "q4": {
+          "question": "How can I apply for solar subsidies through Krishiva Innovatives?",
+          "answer": "Subsidies are provided under government-approved solar programs.\nWe share the latest central and state subsidy rules for your location.\nOur team supports your registration, document upload, and portal steps.\nWe coordinate with DISCOM or nodal agencies until your case is processed."
+        },
+        "q5": {
+          "question": "What is the cost of a rooftop solar system without subsidy?",
+          "answer": "Cost mainly depends on the system size measured in kilowatts (kW).\nRoof type, structure height, cable length, and brand choice also affect price.\nOn-grid systems are usually more economical than hybrid or battery systems.\nWe provide a transparent, item-wise quotation after a site visit and load check."
+        },
+        "q6": {
+          "question": "Why is choosing solar power a smart decision?",
+          "answer": "Solar power cuts your electricity bills for many years.\nIt protects you from future tariff hikes and daytime power cuts.\nSolar energy is clean and supports a greener, low-carbon lifestyle.\nIt also improves your property’s value and modern, eco-friendly image."
+        },
+        "q7": {
+          "question": "Is rooftop solar safe for my home and family?",
+          "answer": "Yes, rooftop solar is very safe when designed and installed correctly.\nWe use approved components, proper earthing, and surge protection devices.\nAll wiring follows standard safety practices to avoid shocks and short circuits.\nPeriodic inspections keep the system healthy and safe over the long term."
+        },
+        "q8": {
+          "question": "What should I check before installing rooftop solar?",
+          "answer": "Your roof should have enough shadow-free space for solar panels.\nWe evaluate roof strength, access, and orientation towards the sun.\nYour current load, sanctioned load, and existing wiring are reviewed.\nPermissions, meter location, and inverter placement are planned in advance."
+        },
+        "q9": {
+          "question": "Why should I choose an on-grid solar system?",
+          "answer": "On-grid systems let you use solar power and grid power together.\nExtra solar units are sent to the grid and adjusted through net metering.\nThey are more cost-effective than battery-based systems for most homes.\nMaintenance is simpler, and components are widely available and serviceable."
+        },
+        "q10": {
+          "question": "What is net metering in simple words?",
+          "answer": "Net metering tracks both imported and exported electricity at your meter.\nWhen solar generation is higher than use, extra power goes to the grid.\nWhen your usage is higher, you draw power back from the grid as usual.\nYour bill is based on the net difference over the billing period."
+        }
+      },
+      "maintenance": {
+        "q1": {
+          "question": "How long does a rooftop solar plant usually last?",
+          "answer": "Most quality solar panels come with 20–25 year performance warranties.\nInverters generally need replacement once in 10–12 years, depending on usage.\nStructures and cables last long with basic checks and timely tightening.\nWith proper design and care, a plant can work reliably for decades."
+        },
+        "q2": {
+          "question": "Is maintaining a rooftop solar plant costly?",
+          "answer": "Routine maintenance costs are quite low for rooftop solar systems.\nMain activities are cleaning panels and checking connections and earthing.\nAnnual health checks or service contracts are affordable if you prefer.\nOverall, savings on electricity bills far exceed the maintenance expense."
+        },
+        "q3": {
+          "question": "Can solar panel installation damage my roof?",
+          "answer": "We use engineered mounting structures suited to your roof type.\nFixing is done with proper fasteners, sealants, or ballast as required.\nCorrect installation prevents leakage and uneven load on the roof.\nA professional EPC like Krishiva Innovatives safeguards your roof integrity."
+        },
+        "q4": {
+          "question": "Do solar panels need regular cleaning?",
+          "answer": "Yes, panels should be cleaned to remove dust, bird droppings, and mud.\nClean panels allow more sunlight and maintain higher power generation.\nFrequency depends on local dust levels and weather conditions.\nWe guide you on safe cleaning methods or offer scheduled cleaning support."
+        },
+        "q5": {
+          "question": "Can non-concrete roofs support solar panels?",
+          "answer": "Many non-concrete roofs can take solar with the right structure design.\nWe assess sheet thickness, purlin spacing, and overall strength on site.\nSpecial mounting structures and clamps are used for metal or tin roofs.\nIf a roof is unsuitable, we suggest alternate mounting options if possible."
+        }
+      },
+      "economics": {
+        "q1": {
+          "question": "What is the approximate cost of a rooftop solar plant?",
+          "answer": "Approximate cost is usually given per kilowatt of capacity installed.\nResidential on-grid systems are typically more economical per kW.\nSite complexity and premium component choices can increase pricing.\nWe share a clear proposal with final cost after understanding your needs."
+        },
+        "q2": {
+          "question": "What is the typical payback period for rooftop solar?",
+          "answer": "Payback depends on your tariff, usage pattern, and system size.\nMost well-designed rooftop systems pay back in around 4–6 years.\nHigher electricity rates or good subsidies can shorten this period.\nAfter payback, most of the energy you generate is net savings."
+        },
+        "q3": {
+          "question": "Are government subsidies available for rooftop solar?",
+          "answer": "Government subsidies are generally available for eligible consumers.\nPolicies differ by state, consumer category, and sanctioned load.\nWe inform you about current central and state-level subsidy schemes.\nOur team helps you follow the correct process to claim eligible benefits."
+        },
+        "q4": {
+          "question": "How can I apply for subsidy in Madhya Pradesh?",
+          "answer": "Subsidy in Madhya Pradesh is routed through approved program portals.\nYou need to choose an empanelled vendor and register your project online.\nWe help with portal registration, document upload, and DISCOM coordination.\nFinal subsidy is released as per government norms after verification."
+        },
+        "q5": {
+          "question": "Does Krishiva Innovatives help with EMI or finance options?",
+          "answer": "Yes, we can connect you with finance or EMI partners where available.\nBanks or NBFCs may offer loans tailored for rooftop solar projects.\nWe share basic project details and documents needed by lenders.\nLoan approval and terms depend on the financier’s independent evaluation."
+        }
+      }
+    },
+    "cta": {
+      "title": "Still have questions?",
+      "body": "Reach out to our team for a free consultation on rooftop solar for your home or business.",
+      "note": "We help you understand sizing, subsidies, payback, and practical details specific to your site."
+    }
+  },
   "footer": {
     "tagline": "Powering Progress with Sustainable Electrical Solutions",
     "quickLinks": "Quick Links",
