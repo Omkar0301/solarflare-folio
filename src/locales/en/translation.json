@@ -169,22 +169,21 @@
   },
   "contact": {
     "title": "Get In Touch",
-    "subtitle": "Ready to Power Your Future?",
     "description": "Contact us today for a free consultation and quote. Our team of experts is ready to help you with all your electrical and solar energy needs.",
     "form": {
       "name": "Full Name",
-      "namePlaceholder": "John Doe",
+      "namePlaceholder": "Enter your name",
       "email": "Email Address",
-      "emailPlaceholder": "john@example.com",
+      "emailPlaceholder": "your.email@example.com",
       "phone": "Phone Number",
       "phonePlaceholder": "+91 98765 43210",
       "location": "Location",
-      "locationPlaceholder": "Mumbai, Maharashtra",
+      "locationPlaceholder": "Your city or area",
       "message": "Your Message",
-      "messagePlaceholder": "Tell us about your project requirements...",
+      "messagePlaceholder": "How can we help you?",
       "submit": "Send Message",
       "sending": "Sending...",
-      "success": "Message sent successfully! We'll get back to you soon.",
+      "success": "Your message has been sent successfully!",
       "error": "Please fill in all required fields correctly."
     },
     "info": {
@@ -198,14 +197,19 @@
       },
       "address": {
         "title": "Address",
-        "value": "Industrial Area, Phase 2, Mumbai, Maharashtra 400001"
+        "value": "Sanket Heights, 912, Sun Pharma Rd, near Akshar Chowk, Parvati Nagar, Atladara, Vadodara, Gujarat 390012"
       }
     },
     "hours": {
       "title": "Business Hours",
-      "weekdays": "Monday - Friday: 8:00 AM - 6:00 PM",
+      "weekdays": "Monday - Friday: 9:00 AM - 6:00 PM",
       "saturday": "Saturday: 9:00 AM - 4:00 PM",
       "sunday": "Sunday: Closed"
+    },
+    "cta": {
+      "title": "Have a Question?",
+      "description": "Our team is here to help with any inquiries about our services.",
+      "button": "Contact Us"
     }
   },
   "faq": {

@@ -125,7 +125,7 @@ const Index = () => {
         <Benefits />
         <Testimonials />
         <FAQ />
-        <Contact />
+        <Contact onOpenContact={() => setShowContactPopup(true)} />
         <Footer />
       </main>
     </>
