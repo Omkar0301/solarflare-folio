@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
+import SocialMediaBar from "@/components/SocialMediaBar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Services from "@/components/Services";
@@ -82,7 +83,8 @@ const Index = () => {
   return (
     <>
       {showBanner && <Banner onClose={handleBannerClose} />}
-      <main className="min-h-screen">
+      <main className="min-h-screen relative">
+        <SocialMediaBar />
         <Navigation />
         <Hero />
         <About />
