@@ -11,13 +11,21 @@ import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
+import ContactPopup from "@/components/ContactPopup";
 
 const Index = () => {
   const [showBanner, setShowBanner] = useState(false);
+  const [showContactPopup, setShowContactPopup] = useState(false);
 
   const handleBannerClose = () => {
     setShowBanner(false);
     localStorage.setItem("bannerClosed", "true");
+  };
+
+  const handleContactPopupClose = () => {
+    setShowContactPopup(false);
+    const closeTime = Date.now();
+    localStorage.setItem("contactPopupClosedAt", closeTime.toString());
   };
 
   useEffect(() => {
@@ -25,6 +33,28 @@ const Index = () => {
     const bannerClosed = localStorage.getItem("bannerClosed");
     if (!bannerClosed) {
       setShowBanner(true);
+    }
+
+    // Contact popup logic
+    const contactPopupClosedAt = localStorage.getItem("contactPopupClosedAt");
+    const now = Date.now();
+    
+    if (!contactPopupClosedAt) {
+      // First time visitor - show after 10 seconds
+      const timer = setTimeout(() => {
+        setShowContactPopup(true);
+      }, 10000);
+      return () => clearTimeout(timer);
+    } else {
+      // Returning visitor - check if 30 seconds have passed since closing
+      const timeSinceClose = now - parseInt(contactPopupClosedAt);
+      if (timeSinceClose >= 30000) {
+        // Show after 10 seconds if enough time has passed
+        const timer = setTimeout(() => {
+          setShowContactPopup(true);
+        }, 10000);
+        return () => clearTimeout(timer);
+      }
     }
 
     // Add JSON-LD structured data for SEO
@@ -84,6 +114,7 @@ const Index = () => {
   return (
     <>
       {showBanner && <Banner onClose={handleBannerClose} />}
+      {showContactPopup && <ContactPopup onClose={handleContactPopupClose} />}
       <main className="min-h-screen relative">
         <SocialMediaBar />
         <Navigation />
