@@ -8,7 +8,8 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { useTranslation } from 'react-i18next';
-import logoImage from '@/assets/logo.png'
+import logoImage from '@/assets/logo.png';
+import logoScrollImage from '@/assets/logo-scroll.png';
 
 const Navigation = () => {
   const { t, i18n } = useTranslation();
@@ -57,9 +58,9 @@ const Navigation = () => {
           {/* Logo with Image */}
           <a href="#home" className="flex items-center space-x-2">
             <img 
-              src={logoImage} 
+              src={isScrolled ? logoScrollImage : logoImage} 
               alt="Krishiva Innovatives" 
-              className="h-8 sm:h-10 lg:h-12 w-auto" // Responsive logo size
+              className={`h-8 sm:h-10 lg:h-12 w-auto transition-smooth ${isScrolled ? 'scale-95' : 'scale-100'}`}
               onError={(e) => {
                 // Fallback if image fails to load
                 const target = e.target as HTMLImageElement;
