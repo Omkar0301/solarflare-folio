@@ -1,140 +1,83 @@
-import { Card } from '@/components/ui/card';
 import { useTranslation } from 'react-i18next';
-import htLtCablesImg from '@/assets/service-ht-lt-cables.jpg';
-import solarPlantImg from '@/assets/service-solar-plant.jpg';
-import electricalPanelImg from '@/assets/service-electrical-panel.jpg';
-import installationImg from '@/assets/service-installation.jpg';
-import consultationImg from '@/assets/service-consultation.jpg';
-import solutionsImg from '@/assets/service-solutions.jpg';
+import { Bolt, Home, Settings, HardHat, Wrench, Sun, Cpu, Zap } from 'lucide-react';
 
 const Services = () => {
   const { t } = useTranslation();
-  
+
   const services = [
     {
-      title: t('services.items.htLt.title'),
-      description: t('services.items.htLt.description'),
-      image: htLtCablesImg,
-      features: [
-        t('services.items.htLt.features.0'),
-        t('services.items.htLt.features.1'),
-        t('services.items.htLt.features.2'),
-        t('services.items.htLt.features.3'),
-      ],
+      key: 'electricalEngineering',
+      icon: <Bolt className="w-8 h-8 text-primary" />,
     },
     {
-      title: t('services.items.solar.title'),
-      description: t('services.items.solar.description'),
-      image: solarPlantImg,
-      features: [
-        t('services.items.solar.features.0'),
-        t('services.items.solar.features.1'),
-        t('services.items.solar.features.2'),
-        t('services.items.solar.features.3'),
-      ],
+      key: 'industrialProjects',
+      icon: <HardHat className="w-8 h-8 text-primary" />,
     },
     {
-      title: t('services.items.panel.title'),
-      description: t('services.items.panel.description'),
-      image: electricalPanelImg,
-      features: [
-        t('services.items.panel.features.0'),
-        t('services.items.panel.features.1'),
-        t('services.items.panel.features.2'),
-        t('services.items.panel.features.3'),
-      ],
+      key: 'projectManagement',
+      icon: <Settings className="w-8 h-8 text-primary" />,
     },
     {
-      title: t('services.items.maintenance.title'),
-      description: t('services.items.maintenance.description'),
-      image: installationImg,
-      features: [
-        t('services.items.maintenance.features.0'),
-        t('services.items.maintenance.features.1'),
-        t('services.items.maintenance.features.2'),
-        t('services.items.maintenance.features.3'),
-      ],
+      key: 'maintenanceContracts',
+      icon: <Wrench className="w-8 h-8 text-primary" />,
     },
     {
-      title: t('services.items.consultation.title'),
-      description: t('services.items.consultation.description'),
-      image: consultationImg,
-      features: [
-        t('services.items.consultation.features.0'),
-        t('services.items.consultation.features.1'),
-        t('services.items.consultation.features.2'),
-        t('services.items.consultation.features.3'),
-      ],
+      key: 'solarSolutions',
+      icon: <Sun className="w-8 h-8 text-primary" />,
     },
     {
-      title: t('services.items.solutions.title'),
-      description: t('services.items.solutions.description'),
-      image: solutionsImg,
-      features: [
-        t('services.items.solutions.features.0'),
-        t('services.items.solutions.features.1'),
-        t('services.items.solutions.features.2'),
-        t('services.items.solutions.features.3'),
-      ],
+      key: 'residentialProjects',
+      icon: <Home className="w-8 h-8 text-primary" />,
     },
-  ];
+    {
+      key: 'renewableEnergy',
+      icon: <Sun className="w-8 h-8 text-primary" />,
+    },
+    {
+      key: 'turnkeySolutions',
+      icon: <Cpu className="w-8 h-8 text-primary" />,
+    }
+  ].filter(service => t(`services.items.${service.key}.title`) !== undefined);
 
   return (
     <section id="services" className="py-16 sm:py-20 bg-background relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
-          {/* Header */}
           <div className="text-center mb-12 sm:mb-16 animate-slide-up">
             <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl mb-4">
               {t('services.title')}
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6" />
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {t('services.subtitle')}
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              {t('services.description')}
             </p>
           </div>
 
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card
+              <div
                 key={index}
-                className="overflow-hidden group cursor-pointer hover:shadow-strong transition-smooth border-border/50 shadow-soft bg-card/80 backdrop-blur-sm animate-scale-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg"
               >
-                {/* Image */}
-                <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-smooth duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-60 group-hover:opacity-80 transition-smooth" />
-                  <h3 className="absolute bottom-4 left-4 font-heading font-bold text-xl sm:text-2xl text-white">
-                    {service.title}
+                <div className="flex flex-col h-full">
+                  <div className="mb-4 p-3 bg-primary/10 w-14 h-14 rounded-lg flex items-center justify-center">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2 text-foreground">
+                    {t(`services.items.${service.key}.title`)}
                   </h3>
-                </div>
-
-                {/* Content */}
-                <div className="p-4 sm:p-6">
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    {service.description}
+                  <p className="text-muted-foreground flex-grow">
+                    {t(`services.items.${service.key}.description`)}
                   </p>
-
-                  {/* Features */}
-                  <div className="flex flex-wrap gap-2">
-                    {service.features.map((feature, idx) => (
-                      <span
-                        key={idx}
-                        className="px-3 py-1 text-sm bg-primary/10 text-primary rounded-full font-medium"
-                      >
-                        {feature}
-                      </span>
-                    ))}
+                  <div className="mt-4 text-sm text-primary font-medium flex items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Learn more
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
                   </div>
                 </div>
-              </Card>
+              </div>
             ))}
           </div>
         </div>

@@ -58,66 +58,43 @@
   "services": {
     "title": "Our Services",
     "subtitle": "Comprehensive Electrical Solutions",
+    "description": "Comprehensive electrical and solar solutions tailored to your specific needs",
     "items": {
-      "htLt": {
-        "title": "HT/LT Cable Installation",
-        "description": "Expert installation of high-tension and low-tension cables with proper safety measures and compliance.",
-        "features": [
-          "Underground & overhead cable laying",
-          "Cable jointing and termination",
-          "Testing and commissioning",
-          "Maintenance and fault detection"
-        ]
+      "electricalEngineering": {
+        "title": "Electrical Engineering Solutions",
+        "description": "Comprehensive electrical engineering services for industrial and commercial applications."
       },
-      "solar": {
-        "title": "Solar Plant Commissioning",
-        "description": "Complete solar power plant setup from design to commissioning for commercial and industrial projects.",
-        "features": [
-          "Site assessment and design",
-          "Panel installation and wiring",
-          "Grid connection and synchronization",
-          "Performance monitoring systems"
-        ]
+      "industrialProjects": {
+        "title": "Industrial electrical green and brown field project",
+        "description": "Expert handling of green and brown field industrial electrical projects."
       },
-      "panel": {
-        "title": "Electrical Panel Assembly",
-        "description": "Custom electrical panel design and assembly for control systems and power distribution.",
-        "features": [
-          "Control panel design",
-          "MCC and PCC panels",
-          "Automation integration",
-          "Quality testing and certification"
-        ]
+      "projectManagement": {
+        "title": "Engineering & Project Management",
+        "description": "Professional project management services for all your engineering needs."
       },
-      "maintenance": {
-        "title": "Maintenance Services",
-        "description": "Comprehensive electrical maintenance services to ensure optimal performance and safety.",
-        "features": [
-          "Preventive maintenance",
-          "Emergency repairs",
-          "Equipment upgrades",
-          "Safety inspections"
-        ]
+      "maintenanceContracts": {
+        "title": "Electrical AMC and ARC contract",
+        "description": "Comprehensive AMC and ARC contracts for electrical systems maintenance."
       },
-      "consultation": {
-        "title": "Engineering Consultation",
-        "description": "Expert consultation for electrical system design, energy efficiency, and compliance.",
-        "features": [
-          "System design and planning",
-          "Energy audit services",
-          "Compliance consulting",
-          "Technical documentation"
-        ]
+      "solarSolutions": {
+        "title": "Solar plant installation and commissioning",
+        "description": "Professional solar plant installation and commissioning services."
       },
-      "solutions": {
-        "title": "Industrial Solutions",
-        "description": "Tailored electrical solutions for industrial facilities and manufacturing plants.",
-        "features": [
-          "Process automation",
-          "Power quality solutions",
-          "Load management systems",
-          "Safety systems integration"
-        ]
+      "solarServices": {
+        "title": "All types of solar services",
+        "description": "Comprehensive solar energy solutions for all your needs."
+      },
+      "residentialProjects": {
+        "title": "Residential Projects",
+        "description": "Complete electrical solutions for residential properties."
+      },
+      "renewableEnergy": {
+        "title": "Renewable Energy Service",
+        "description": "Comprehensive renewable energy solutions."
+      },
+      "turnkeySolutions": {
+        "title": "Turnkey Project Solutions",
+        "description": "End-to-end project execution from concept to commissioning."
       }
     }
   },
