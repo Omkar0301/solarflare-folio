@@ -8,13 +8,14 @@ import Portfolio from "@/components/Portfolio";
 import Benefits from "@/components/Benefits";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
+import Partners from "../components/Partners";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import ContactPopup from "@/components/ContactPopup";
 
-const Index = () => {
+const Index = (): JSX.Element => {
   const [showBanner, setShowBanner] = useState(false);
   const [showContactPopup, setShowContactPopup] = useState(false);
 
@@ -77,8 +78,9 @@ const Index = () => {
       },
       geo: {
         "@type": "GeoCoordinates",
-        latitude: 34.0522,
-        longitude: -118.2437,
+        // Updated to Mumbai, India coordinates
+        latitude: 19.0760,
+        longitude: 72.8777,
       },
       openingHoursSpecification: [
         {
@@ -126,6 +128,7 @@ const Index = () => {
         <Benefits />
         <Testimonials />
         <FAQ />
+        <Partners />
         <Certifications />
         <Contact onOpenContact={() => setShowContactPopup(true)} />
         <Footer />

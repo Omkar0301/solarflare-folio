@@ -307,28 +307,46 @@
           "answer": "Yes, we can connect you with finance or EMI partners where available.\nBanks or NBFCs may offer loans tailored for rooftop solar projects.\nWe share basic project details and documents needed by lenders.\nLoan approval and terms depend on the financier’s independent evaluation."
         }
       }
-    },
-    "cta": {
-      "title": "Still have questions?",
-      "body": "Reach out to our team for a free consultation on rooftop solar for your home or business.",
-      "note": "We help you understand sizing, subsidies, payback, and practical details specific to your site."
     }
+  },
+  "partners": {
+    "title": "Our Global Partners",
+    "subtitle": "Collaborating with industry leaders to deliver exceptional solar solutions",
+    "items": [
+      {
+        "name": "Partner 1",
+        "logo": "partner1-logo.png",
+        "description": "Partner 1 description"
+      },
+      {
+        "name": "Partner 2",
+        "logo": "partner2-logo.png",
+        "description": "Partner 2 description"
+      }
+    ]
   },
   "certifications": {
     "title": "Professional Certifications",
-    "subtitle": "Our accreditations and partnerships with leading industry organizations"
+    "subtitle": "Our accreditations and partnerships with leading industry organizations",
+    "items": [
+      {
+        "name": "Certification 1",
+        "logo": "certification1-logo.png",
+        "description": "Certification 1 description"
+      },
+      {
+        "name": "Certification 2",
+        "logo": "certification2-logo.png",
+        "description": "Certification 2 description"
+      }
+    ]
   },
-  "footer": {
-    "tagline": "Powering Progress with Sustainable Electrical Solutions",
-    "quickLinks": "Quick Links",
-    "followUs": "Follow Us",
-    "newsletter": {
-      "title": "Newsletter",
-      "description": "Subscribe to get updates on our latest projects and offers.",
-      "placeholder": "Your email",
-      "button": "Subscribe"
-    },
-    "backToTop": "Back to Top",
-    "rights": "All rights reserved."
-  }
+  "newsletter": {
+    "title": "Newsletter",
+    "description": "Subscribe to get updates on our latest projects and offers.",
+    "placeholder": "Your email",
+    "button": "Subscribe"
+  },
+  "backToTop": "Back to Top",
+  "rights": "All rights reserved."
 }
