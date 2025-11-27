@@ -28,7 +28,8 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-16 sm:py-20 gradient-subtle wave-divider">
+    <section id="about" className="py-16 sm:py-20 relative bg-gradient-to-br from-background to-primary/5">
+      <div className="absolute inset-0 bg-grid-pattern opacity-5" />
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -43,13 +44,13 @@ const About = () => {
           </div>
 
           {/* Mission Statement */}
-          <div className="bg-gradient-hero text-gray-900 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 mb-8 sm:mb-12 shadow-strong animate-scale-in relative overflow-hidden">
-            <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />
+          <div className="bg-gradient-to-r from-primary/5 to-primary/10 text-foreground border border-white/20 dark:border-border/30 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 mb-8 sm:mb-12 shadow-soft hover:shadow-strong transition-smooth animate-scale-in relative overflow-hidden">
+            <div className="absolute inset-0 bg-white/5 backdrop-blur-sm" />
             <div className="max-w-3xl mx-auto text-center relative z-10">
-              <h3 className="font-heading font-bold text-2xl sm:text-3xl mb-4">
+              <h3 className="font-heading font-bold text-2xl sm:text-3xl mb-4 text-foreground">
                 {t('about.vision')}
               </h3>
-              <p className="text-lg leading-relaxed text-gray-800">
+              <p className="text-lg leading-relaxed text-foreground/90 dark:text-muted-foreground">
                 {t('about.visionText')}
               </p>
             </div>
@@ -60,7 +61,7 @@ const About = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-card rounded-2xl p-6 shadow-card hover:shadow-strong transition-smooth group cursor-pointer animate-slide-up"
+                className="bg-white/90 dark:bg-card/90 backdrop-blur-sm rounded-2xl p-6 shadow-soft hover:shadow-strong transition-smooth group cursor-pointer animate-slide-up border border-white/20 dark:border-border/30 hover:border-primary/30"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-bounce">

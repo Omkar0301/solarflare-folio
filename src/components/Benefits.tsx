@@ -1,5 +1,6 @@
 import { DollarSign, Leaf, TrendingUp, Shield, Zap, Home } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
 
 const Benefits = () => {
   const { t } = useTranslation();
@@ -50,9 +51,13 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="py-16 sm:py-20 bg-background relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-secondary/5 pointer-events-none" />
-      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+    <section className="parallax-section relative overflow-hidden" style={{
+      backgroundImage: 'url("/src/assets/hero-solar.jpg")',
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+    }}>
+      <div className="parallax-overlay" />
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 py-16 sm:py-20">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12 sm:mb-16 animate-slide-up">
@@ -67,7 +72,7 @@ const Benefits = () => {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="group bg-card/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-soft hover:shadow-strong transition-smooth cursor-pointer animate-slide-up border border-border/30"
+                className="group bg-white/90 dark:bg-card/90 hover:bg-white dark:hover:bg-card transition-smooth backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-soft hover:shadow-strong cursor-pointer animate-slide-up border border-white/20 dark:border-border/30"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div
@@ -78,7 +83,7 @@ const Benefits = () => {
                 <h3 className="font-heading font-semibold text-xl mb-3 group-hover:text-primary transition-smooth">
                   {benefit.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-foreground/80 dark:text-muted-foreground leading-relaxed">
                   {benefit.description}
                 </p>
               </div>

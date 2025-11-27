@@ -40,9 +40,9 @@ const Testimonials = () => {
   const current = testimonials[currentIndex];
 
   return (
-    <section id="testimonials" className="py-16 sm:py-20 bg-muted/20 relative">
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-      <div className="container mx-auto px-4 sm:px-6">
+    <section id="testimonials" className="py-16 sm:py-20 relative bg-gradient-to-b from-background to-primary/5">
+      <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12 sm:mb-16 animate-slide-up">
@@ -53,7 +53,7 @@ const Testimonials = () => {
           </div>
 
           {/* Testimonial Card */}
-          <Card className="relative p-6 sm:p-8 lg:p-12 shadow-soft border-border/40 bg-card/90 backdrop-blur-sm animate-scale-in hover:shadow-strong transition-smooth">
+          <Card className="relative p-6 sm:p-8 lg:p-12 shadow-soft border border-white/20 dark:border-border/30 bg-white/90 dark:bg-card/90 backdrop-blur-sm hover:shadow-strong hover:border-primary/30 transition-smooth animate-scale-in">
             {/* Quote Icon */}
             <div className="absolute top-4 sm:top-6 right-4 sm:right-6 text-primary/10">
               <Quote size={60} className="sm:w-20 sm:h-20" />
@@ -62,12 +62,12 @@ const Testimonials = () => {
             {/* Rating */}
             <div className="flex gap-1 mb-4 sm:mb-6">
               {[...Array(current.rating)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 sm:w-6 sm:h-6 fill-secondary text-secondary" />
+                <Star key={i} className="w-5 h-5 sm:w-6 sm:h-6 fill-yellow-400 text-yellow-400" />
               ))}
             </div>
 
             {/* Testimonial Text */}
-            <blockquote className="text-lg sm:text-xl lg:text-2xl text-foreground leading-relaxed mb-6 sm:mb-8 relative z-10">
+            <blockquote className="text-lg sm:text-xl lg:text-2xl text-foreground/90 dark:text-foreground leading-relaxed mb-6 sm:mb-8 relative z-10">
               "{current.text}"
             </blockquote>
 
@@ -86,7 +86,7 @@ const Testimonials = () => {
                   onClick={prevTestimonial}
                   variant="outline"
                   size="icon"
-                  className="rounded-full hover:bg-primary hover:text-primary-foreground transition-smooth"
+                  className="rounded-full hover:bg-primary hover:text-primary-foreground transition-smooth border-border/50"
                   aria-label="Previous testimonial"
                 >
                   <ChevronLeft className="w-5 h-5" />
@@ -95,7 +95,7 @@ const Testimonials = () => {
                   onClick={nextTestimonial}
                   variant="outline"
                   size="icon"
-                  className="rounded-full hover:bg-primary hover:text-primary-foreground transition-smooth"
+                  className="rounded-full hover:bg-primary hover:text-primary-foreground transition-smooth border-border/50"
                   aria-label="Next testimonial"
                 >
                   <ChevronRight className="w-5 h-5" />

@@ -27,9 +27,9 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-16 sm:py-20 gradient-muted relative">
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-      <div className="container mx-auto px-4 sm:px-6">
+    <section id="portfolio" className="py-16 sm:py-20 relative bg-gradient-to-b from-background to-primary/5">
+      <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12 sm:mb-16 animate-slide-up">
@@ -47,7 +47,7 @@ const Portfolio = () => {
             {projects.map((project, index) => (
               <Card
                 key={index}
-                className="overflow-hidden group cursor-pointer hover:shadow-strong transition-smooth border-border/40 shadow-soft bg-card/90 backdrop-blur-sm animate-scale-in"
+                className="overflow-hidden group cursor-pointer hover:shadow-strong transition-smooth border border-white/20 dark:border-border/30 bg-white/90 dark:bg-card/90 backdrop-blur-sm hover:border-primary/30 animate-scale-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Image */}
@@ -57,7 +57,7 @@ const Portfolio = () => {
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-smooth duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent" />
                   
                   {/* Overlay Content */}
                   <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
@@ -77,8 +77,8 @@ const Portfolio = () => {
                 </div>
 
                 {/* Description */}
-                <div className="p-4 sm:p-6 bg-card">
-                  <p className="text-muted-foreground leading-relaxed">
+                <div className="p-4 sm:p-6 bg-white/90 dark:bg-card/90">
+                  <p className="text-foreground/80 dark:text-muted-foreground leading-relaxed">
                     {project.description}
                   </p>
                 </div>
