@@ -8,6 +8,7 @@ import Portfolio from "@/components/Portfolio";
 import Benefits from "@/components/Benefits";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
+import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
@@ -125,6 +126,7 @@ const Index = () => {
         <Benefits />
         <Testimonials />
         <FAQ />
+        <Certifications />
         <Contact onOpenContact={() => setShowContactPopup(true)} />
         <Footer />
       </main>
