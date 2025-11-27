@@ -52,7 +52,7 @@ const Benefits = () => {
 
   return (
     <section className="parallax-section relative overflow-hidden" style={{
-      backgroundImage: 'url("/src/assets/hero-solar.jpg")',
+      backgroundImage: 'url("/hero-solar.jpg")',
       backgroundPosition: 'center',
       backgroundSize: 'cover',
     }}>
