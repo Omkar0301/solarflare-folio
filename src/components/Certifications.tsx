@@ -4,17 +4,17 @@ const Certifications = () => {
   const { t } = useTranslation();
   
   const certifications = [
-    { id: 'ugvcl', name: 'UGVCL', image: '/src/assets/certifications/ugvcl.jpg' },
-    { id: 'pgvcl', name: 'PGVCL', image: '/src/assets/certifications/pgvcl.png' },
-    { id: 'mgvcl', name: 'MGVCL', image: '/src/assets/certifications/mgvcl.png' },
-    { id: 'guvnl', name: 'GUVNL', image: '/src/assets/certifications/guvnl.png' },
-    { id: 'dgvcl', name: 'DGVCL', image: '/src/assets/certifications/dgvcl.png' },
-    { id: 'iso', name: 'ISO 9001:2015', image: '/src/assets/certifications/iso.jpg' },
-    { id: 'msme', name: 'MSME', image: '/src/assets/certifications/msme.png' },
-    { id: 'makeinindia', name: 'Make in India', image: '/src/assets/certifications/makeinindia.webp' },
-    { id: 'nise', name: 'NISE', image: '/src/assets/certifications/nise.jpg' },
-    { id: 'nsic', name: 'NSIC', image: '/src/assets/certifications/nsic.png' },
-    { id: 'startupindia', name: 'Startup India', image: '/src/assets/certifications/startupindia.png' },
+    { id: 'ugvcl', name: 'UGVCL', image: '/certifications/ugvcl.jpg' },
+    { id: 'pgvcl', name: 'PGVCL', image: '/certifications/pgvcl.png' },
+    { id: 'mgvcl', name: 'MGVCL', image: '/certifications/mgvcl.png' },
+    { id: 'guvnl', name: 'GUVNL', image: '/certifications/guvnl.png' },
+    { id: 'dgvcl', name: 'DGVCL', image: '/certifications/dgvcl.png' },
+    { id: 'iso', name: 'ISO 9001:2015', image: '/certifications/iso.jpg' },
+    { id: 'msme', name: 'MSME', image: '/certifications/msme.png' },
+    { id: 'makeinindia', name: 'Make in India', image: '/certifications/makeinindia.webp' },
+    { id: 'nise', name: 'NISE', image: '/certifications/nise.jpg' },
+    { id: 'nsic', name: 'NSIC', image: '/certifications/nsic.png' },
+    { id: 'startupindia', name: 'Startup India', image: '/certifications/startupindia.png' },
   ];
 
   return (

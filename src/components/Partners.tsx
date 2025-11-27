@@ -1,9 +1,5 @@
 import { useTranslation } from 'react-i18next';
 
-// Import images using Vite's import syntax
-import adani from '@/assets/partners/adani.png';
-import rayzon from '@/assets/partners/rayzon.jpg';
-import waaree from '@/assets/partners/waaree.jpg';
 
 // Type definition for partner data
 interface Partner {
@@ -19,17 +15,17 @@ const Partners = () => {
     { 
       id: 'adani', 
       name: 'Adani', 
-      image: adani 
+      image: '/partners/adani.png' 
     },
     { 
       id: 'rayzon', 
       name: 'Rayzon', 
-      image: rayzon 
+      image: '/partners/rayzon.jpg' 
     },
     { 
       id: 'waaree', 
       name: 'Waaree', 
-      image: waaree 
+      image: '/partners/waaree.jpg' 
     },
   ];
 
