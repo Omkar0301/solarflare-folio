@@ -111,13 +111,16 @@ const Footer = () => {
               <p className="text-background/80 text-xs md:text-sm mb-2 md:mb-3">
                 {t('footer.newsletter.description')}
               </p>
-              <div className="flex flex-col md:flex-row gap-2">
+              <div className="flex flex-col xs:flex-row gap-2 w-full">
                 <input
                   type="email"
                   placeholder={t('footer.newsletter.placeholder')}
-                  className="flex-1 px-3 py-2 text-sm rounded-lg bg-background/10 border border-background/20 text-background placeholder:text-background/50 focus:outline-none focus:border-secondary"
+                  className="flex-1 min-w-0 px-3 py-2 text-xs sm:text-sm rounded-lg bg-background/10 border border-background/20 text-background placeholder:text-background/50 focus:outline-none focus:border-secondary"
                 />
-                <Button size="sm" className="bg-secondary hover:bg-secondary-light text-secondary-foreground text-xs md:text-sm whitespace-nowrap">
+                <Button 
+                  size="sm" 
+                  className="bg-secondary hover:bg-secondary-light text-secondary-foreground text-xs sm:text-sm whitespace-nowrap flex-shrink-0 w-full xs:w-auto justify-center"
+                >
                   {t('footer.newsletter.button')}
                 </Button>
               </div>

@@ -58,25 +58,25 @@ const Contact = ({ onOpenContact }: ContactProps) => {
               {/* Contact Cards */}
               <div className="grid grid-cols-1 gap-4">
                 {/* Phone and Email in a 2-column layout */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {contactInfo.slice(0, 2).map((info, index) => (
                     <a
                       key={index}
                       href={info.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block h-full"
+                      className="block h-full min-w-0"
                     >
-                      <Card className="h-full p-6 shadow-soft hover:shadow-strong transition-smooth group cursor-pointer border-border/40 bg-card/80 backdrop-blur-sm hover:bg-card/90">
-                        <div className="flex items-start gap-4">
-                          <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-bounce">
-                            <info.icon className="w-6 h-6 text-primary" />
+                      <Card className="h-full p-4 sm:p-6 shadow-soft hover:shadow-strong transition-smooth group cursor-pointer border-border/40 bg-card/80 backdrop-blur-sm hover:bg-card/90 overflow-hidden">
+                        <div className="flex items-start gap-3 sm:gap-4">
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-bounce">
+                            <info.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                           </div>
-                          <div>
-                            <h4 className="font-heading font-semibold text-lg mb-1 group-hover:text-primary transition-smooth">
+                          <div className="min-w-0">
+                            <h4 className="font-heading font-semibold text-sm sm:text-base md:text-lg mb-1 group-hover:text-primary transition-smooth truncate">
                               {info.title}
                             </h4>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-xs truncate">
                               {info.content}
                             </p>
                           </div>
@@ -93,18 +93,18 @@ const Contact = ({ onOpenContact }: ContactProps) => {
                     href={info.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block h-full"
+                    className="block h-full min-w-0"
                   >
-                    <Card className="h-full p-6 shadow-soft hover:shadow-strong transition-smooth group cursor-pointer border-border/40 bg-card/80 backdrop-blur-sm hover:bg-card/90">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-bounce">
-                          <info.icon className="w-6 h-6 text-primary" />
+                    <Card className="h-full p-4 sm:p-6 shadow-soft hover:shadow-strong transition-smooth group cursor-pointer border-border/40 bg-card/80 backdrop-blur-sm hover:bg-card/90 overflow-hidden">
+                      <div className="flex items-start gap-3 sm:gap-4">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-bounce">
+                          <info.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                         </div>
-                        <div className="flex-1">
-                          <h4 className="font-heading font-semibold text-lg mb-1 group-hover:text-primary transition-smooth">
+                        <div className="min-w-0 flex-1">
+                          <h4 className="font-heading font-semibold text-sm sm:text-base md:text-lg mb-1 group-hover:text-primary transition-smooth truncate">
                             {info.title}
                           </h4>
-                          <p className="text-muted-foreground text-sm">
+                          <p className="text-muted-foreground text-xs line-clamp-2">
                             {info.content}
                           </p>
                         </div>
