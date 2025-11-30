@@ -353,5 +353,18 @@
     "button": "Subscribe"
   },
   "backToTop": "Back to Top",
-  "rights": "All rights reserved."
+  "rights": "All rights reserved.",
+  "footer": {
+    "tagline": "Powering Progress with Sustainable Electrical Solutions",
+    "quickLinks": "Quick Links",
+    "followUs": "Follow Us",
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Subscribe to get updates on our latest projects and offers.",
+      "placeholder": "Your email",
+      "button": "Subscribe"
+    },
+    "backToTop": "Back to Top",
+    "rights": "All rights reserved."
+  }
 }
