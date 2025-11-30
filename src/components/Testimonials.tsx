@@ -40,8 +40,9 @@ const Testimonials = () => {
   const current = testimonials[currentIndex];
 
   return (
-    <section id="testimonials" className="py-16 sm:py-20 relative bg-gradient-to-b from-background to-primary/5">
+    <section id="testimonials" className="py-16 sm:py-20 relative bg-gradient-to-br from-primary/8 via-background to-primary/5">
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
