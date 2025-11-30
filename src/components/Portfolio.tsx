@@ -64,21 +64,6 @@ const Portfolio = () => {
                   </div>
                 ))}
               </Marquee>
-              
-              {/* Overlay Content */}
-              <div className="absolute inset-0 flex items-end p-6 sm:p-8 text-white pointer-events-none">
-                <div className="w-full">
-                  <h3 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl mb-2">
-                    {t('portfolio.title')}
-                  </h3>
-                  <p className="text-white/90 text-sm sm:text-base mb-4">📍 Vadodara, Gujarat</p>
-                  <div className="bg-black/30 backdrop-blur-sm p-4 rounded-lg max-w-2xl">
-                    <p className="text-white/90 text-sm sm:text-base leading-relaxed">
-                      {t('portfolio.subtitle')}
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
