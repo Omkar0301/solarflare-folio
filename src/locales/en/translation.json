@@ -211,7 +211,7 @@
     "info": {
       "phone": {
         "title": "Phone",
-        "value": "+91 98765 43210"
+        "value": "+91 9537222082"
       },
       "email": {
         "title": "Email",
@@ -224,9 +224,9 @@
     },
     "hours": {
       "title": "Business Hours",
-      "weekdays": "Monday - Friday: 9:00 AM - 6:00 PM",
-      "saturday": "Saturday: 9:00 AM - 4:00 PM",
-      "sunday": "Sunday: Closed"
+      "weekdays": "Monday - Friday: 9:00 AM - 7:00 PM",
+      "saturday": "Saturday: 9:00 AM - 7:00 PM",
+      "sunday": "Sunday: 9:00 AM - 5:00 PM"
     },
     "cta": {
       "title": "Have a Question?",
