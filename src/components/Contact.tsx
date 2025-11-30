@@ -43,7 +43,8 @@ const Contact = ({ onOpenContact }: ContactProps) => {
           {/* Header */}
           <div className="text-center mb-12 sm:mb-16 animate-slide-up">
             <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl mb-4">
-              {t("contact.title")}
+              <span className="inline-block">{t("contact.title").split(' ')[0]}</span>{' '}
+              <span className="text-primary">{t("contact.title").split(' ').slice(1).join(' ')}</span>
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6" />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

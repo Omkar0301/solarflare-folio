@@ -35,7 +35,8 @@ const Partners = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12 animate-slide-up">
           <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl mb-4">
-            {t('partners.title', 'Our Global Partners')}
+            <span className="inline-block">{t('partners.title', 'Our Global Partners').split(' ')[0]}</span>{' '}
+            <span className="text-primary">{t('partners.title', 'Our Global Partners').split(' ').slice(1).join(' ')}</span>
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

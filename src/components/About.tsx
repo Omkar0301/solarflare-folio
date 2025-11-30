@@ -35,7 +35,8 @@ const About = () => {
           {/* Header */}
           <div className="text-center mb-12 sm:mb-16 animate-slide-up">
             <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl mb-4">
-              {t('about.companyName')}
+              <span className="inline-block">{t('about.companyName').split(' ')[0]}</span>{' '}
+              <span className="text-primary">{t('about.companyName').split(' ').slice(1).join(' ')}</span>
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6" />
             
@@ -70,7 +71,8 @@ const About = () => {
                   </svg>
                 </div>
                 <h3 className="font-heading font-bold text-2xl sm:text-3xl mb-4 text-foreground">
-                  {t('about.globalReach.title')}
+                  <span className="inline-block">{t('about.globalReach.title').split(' ')[0]}</span>{' '}
+                  <span className="text-primary">{t('about.globalReach.title').split(' ').slice(1).join(' ')}</span>
                 </h3>
                 <p className="text-lg leading-relaxed text-foreground/90 dark:text-muted-foreground">
                   {t('about.globalReach.description')}
@@ -100,7 +102,8 @@ const About = () => {
                   </svg>
                 </div>
                 <h3 className="font-heading font-bold text-2xl sm:text-3xl mb-4 text-foreground">
-                  {t('about.ourCommitment.title')}
+                  <span className="inline-block">{t('about.ourCommitment.title').split(' ')[0]}</span>{' '}
+                  <span className="text-primary">{t('about.ourCommitment.title').split(' ').slice(1).join(' ')}</span>
                 </h3>
                 <p className="text-lg leading-relaxed text-foreground/90 dark:text-muted-foreground mb-6">
                   {t('about.ourCommitment.description')}
@@ -133,7 +136,8 @@ const About = () => {
           <div className="bg-gradient-to-r from-primary/5 to-primary/10 text-foreground border border-white/20 dark:border-border/30 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 mb-8 sm:mb-12 shadow-soft hover:shadow-strong transition-smooth animate-scale-in">
             <div className="max-w-6xl mx-auto">
               <h3 className="font-heading font-bold text-2xl sm:text-3xl mb-10 text-foreground text-center">
-                {t('about.whyChooseUs.title')}
+                <span className="inline-block">{t('about.whyChooseUs.title').split(' ')[0]}</span>{' '}
+                <span className="text-primary">{t('about.whyChooseUs.title').split(' ').slice(1).join(' ')}</span>
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {(t('about.whyChooseUs.points', { returnObjects: true }) as string[]).map((point: string, index: number) => (
