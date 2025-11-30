@@ -16,7 +16,7 @@ const Contact = ({ onOpenContact }: ContactProps) => {
       icon: Phone,
       title: t("contact.info.phone.title"),
       content: t("contact.info.phone.value"),
-      href: "tel:+919876543210",
+      href: "tel:+919537222082",
     },
     {
       icon: Mail,
