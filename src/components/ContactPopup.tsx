@@ -58,7 +58,26 @@ const ContactPopup = ({ onClose }: ContactPopupProps) => {
 
     setIsSubmitting(true);
 
-    setTimeout(() => {
+    try {
+      const response = await fetch("https://formspree.io/f/mwpgezor", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          location: formData.location,
+          message: formData.message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
       toast({
         title: t('contact.form.success'),
         description: t('contact.form.success'),
@@ -75,7 +94,15 @@ const ContactPopup = ({ onClose }: ContactPopupProps) => {
       setTimeout(() => {
         onClose();
       }, 1000);
-    }, 1500);
+    } catch (error) {
+      console.error(error);
+      toast({
+        title: t('contact.form.error'),
+        description: t('contact.form.error'),
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+    }
   };
 
   return (
