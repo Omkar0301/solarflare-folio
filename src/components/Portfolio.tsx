@@ -1,34 +1,32 @@
-import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { useTranslation } from 'react-i18next';
-import project1 from '@/assets/project-1.jpg';
-import project2 from '@/assets/project-2.jpg';
+import Marquee from 'react-fast-marquee';
+import { Card } from '@/components/ui/card';
 
 const Portfolio = () => {
   const { t } = useTranslation();
-  
-  const projects = [
-    {
-      title: t('portfolio.projects.solar.title'),
-      category: t('portfolio.projects.solar.category'),
-      capacity: t('portfolio.projects.solar.capacity'),
-      location: t('portfolio.projects.solar.location'),
-      description: t('portfolio.projects.solar.description'),
-      image: project1,
-    },
-    {
-      title: t('portfolio.projects.industrial.title'),
-      category: t('portfolio.projects.industrial.category'),
-      capacity: t('portfolio.projects.industrial.capacity'),
-      location: t('portfolio.projects.industrial.location'),
-      description: t('portfolio.projects.industrial.description'),
-      image: project2,
-    },
+
+  const projectImages = [
+    '/portfolio/IMG-20251122-WA0001.jpg',
+    '/portfolio/IMG-20251122-WA0002.jpg',
+    '/portfolio/IMG-20251122-WA0003.jpg',
+    '/portfolio/IMG-20251122-WA0004.jpg',
+    '/portfolio/IMG-20251122-WA0005.jpg',
+    '/portfolio/IMG-20251122-WA0006.jpg',
+    '/portfolio/IMG-20251122-WA0007.jpg'
   ];
 
+  // Duplicate images for seamless looping
+  const marqueeImages = [...projectImages, ...projectImages];
+
+  const project = {
+    title: t('portfolio.title'),
+    description: t('portfolio.subtitle'),
+    location: 'Vadodara',
+    images: projectImages,
+  };
+
   return (
-    <section id="portfolio" className="py-16 sm:py-20 relative bg-gradient-to-b from-background to-primary/5">
-      <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+    <section id="portfolio" className="py-16 sm:py-20 relative bg-background overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -43,48 +41,45 @@ const Portfolio = () => {
             </p>
           </div>
 
-          {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {projects.map((project, index) => (
-              <Card
-                key={index}
-                className="overflow-hidden group cursor-pointer hover:shadow-strong transition-smooth border border-white/20 dark:border-border/30 bg-white/90 dark:bg-card/90 backdrop-blur-sm hover:border-primary/30 animate-scale-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
+          {/* Image Marquee */}
+          <div className="mb-12">
+            <div className="relative h-72 md:h-96 lg:h-[32rem] rounded-xl overflow-hidden">
+              <Marquee 
+                speed={40}
+                gradient={true}
+                gradientWidth={100}
+                className="h-full"
               >
-                {/* Image */}
-                <div className="relative h-56 sm:h-64 lg:h-72 overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-smooth duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent" />
-                  
-                  {/* Overlay Content */}
-                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Badge className="bg-secondary text-secondary-foreground text-xs sm:text-sm">
-                        {project.category}
-                      </Badge>
-                      <Badge variant="outline" className="border-white text-white text-xs sm:text-sm">
-                        {project.capacity}
-                      </Badge>
-                    </div>
-                    <h3 className="font-heading font-bold text-xl sm:text-2xl mb-1">
-                      {project.title}
-                    </h3>
-                    <p className="text-white/90 text-sm">📍 {project.location}</p>
+                {marqueeImages.map((img, idx) => (
+                  <div 
+                    key={`${img}-${idx}`} 
+                    className="relative h-64 md:h-[28rem] lg:h-[30rem] w-auto mx-2 md:mx-4 rounded-lg overflow-hidden group"
+                  >
+                    <img
+                      src={img}
+                      alt={`Project ${idx + 1}`}
+                      className="h-full w-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                ))}
+              </Marquee>
+              
+              {/* Overlay Content */}
+              <div className="absolute inset-0 flex items-end p-6 sm:p-8 text-white pointer-events-none">
+                <div className="w-full">
+                  <h3 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl mb-2">
+                    {t('portfolio.title')}
+                  </h3>
+                  <p className="text-white/90 text-sm sm:text-base mb-4">📍 Vadodara, Gujarat</p>
+                  <div className="bg-black/30 backdrop-blur-sm p-4 rounded-lg max-w-2xl">
+                    <p className="text-white/90 text-sm sm:text-base leading-relaxed">
+                      {t('portfolio.subtitle')}
+                    </p>
                   </div>
                 </div>
-
-                {/* Description */}
-                <div className="p-4 sm:p-6 bg-white/90 dark:bg-card/90">
-                  <p className="text-foreground/80 dark:text-muted-foreground leading-relaxed">
-                    {project.description}
-                  </p>
-                </div>
-              </Card>
-            ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

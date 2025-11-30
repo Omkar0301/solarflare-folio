@@ -60,17 +60,38 @@ const Services = () => {
   ].filter(service => t(`services.items.${service.key}.title`) !== undefined);
 
   return (
-    <section id="services" className="py-16 sm:py-20 relative bg-gradient-to-br from-primary/90 via-primary/70 to-accent/80 overflow-hidden">
-      <div className="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none" />
+    <section id="services" className="py-16 sm:py-20 relative overflow-hidden">
+      {/* Background Image with Enhanced Blur and Overlay */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/service-solar-plant.jpg"
+            alt="Solar plant installation"
+            className="w-full h-full object-cover scale-110 blur-sm"
+            style={{
+              filter: 'blur(8px) brightness(0.8)',
+              transform: 'scale(1.1)',
+              transformOrigin: 'center',
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              transition: 'filter 0.5s ease'
+            }}
+            loading="lazy"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/70 via-primary/50 to-accent/60" />
+      </div>
+      <div className="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none z-0" />
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 sm:mb-16 animate-slide-up">
             <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl mb-4">
-              <span className="inline-block">{t('services.title').split(' ')[0]}</span>{' '}
-              <span className="text-primary-dark">{t('services.title').split(' ').slice(1).join(' ')}</span>
+              <span className="text-white">{t('services.title').split(' ')[0]}</span>{' '}
+              <span className="text-green-400">{t('services.title').split(' ').slice(1).join(' ')}</span>
             </h2>
-            <div className="w-24 h-1 bg-primary-dark mx-auto mb-6" />
-            <p className="text-gray-800 max-w-2xl mx-auto text-lg">
+            <div className="w-24 h-1 bg-green-400 mx-auto mb-6" />
+            <p className="text-white/90 max-w-2xl mx-auto text-lg">
               {t('services.description')}
             </p>
           </div>
