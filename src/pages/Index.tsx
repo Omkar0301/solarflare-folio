@@ -118,7 +118,7 @@ const Index = (): JSX.Element => {
       {showBanner && <Banner onClose={handleBannerClose} />}
       {showContactPopup && <ContactPopup onClose={handleContactPopupClose} />}
       <main className="min-h-screen relative">
-        {/* <SocialMediaBar onInquiryClick={() => setShowContactPopup(true)} /> */}
+        {/* <SocialMediaBar onInquiryClick={() => setShowContactPopup(true)} />  */}
         <Navigation />
         <Hero />
         <About />
