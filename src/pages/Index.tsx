@@ -22,6 +22,25 @@ const Index = (): JSX.Element => {
   const handleBannerClose = () => {
     setShowBanner(false);
     localStorage.setItem("bannerClosed", "true");
+    
+    // Show contact popup 10 seconds after banner is closed
+    const contactPopupClosedAt = localStorage.getItem("contactPopupClosedAt");
+    const now = Date.now();
+    
+    if (!contactPopupClosedAt) {
+      // First time visitor - show after 10 seconds
+      setTimeout(() => {
+        setShowContactPopup(true);
+      }, 10000);
+    } else {
+      // Returning visitor - check if 30 seconds have passed since last close
+      const timeSinceClose = now - parseInt(contactPopupClosedAt);
+      if (timeSinceClose >= 30000) {
+        setTimeout(() => {
+          setShowContactPopup(true);
+        }, 10000);
+      }
+    }
   };
 
   const handleContactPopupClose = () => {
@@ -37,27 +56,7 @@ const Index = (): JSX.Element => {
       setShowBanner(true);
     }
 
-    // Contact popup logic
-    const contactPopupClosedAt = localStorage.getItem("contactPopupClosedAt");
-    const now = Date.now();
-    
-    if (!contactPopupClosedAt) {
-      // First time visitor - show after 10 seconds
-      const timer = setTimeout(() => {
-        setShowContactPopup(true);
-      }, 10000);
-      return () => clearTimeout(timer);
-    } else {
-      // Returning visitor - check if 30 seconds have passed since closing
-      const timeSinceClose = now - parseInt(contactPopupClosedAt);
-      if (timeSinceClose >= 30000) {
-        // Show after 10 seconds if enough time has passed
-        const timer = setTimeout(() => {
-          setShowContactPopup(true);
-        }, 10000);
-        return () => clearTimeout(timer);
-      }
-    }
+    // Contact popup logic - moved to handleBannerClose
 
     // Add JSON-LD structured data for SEO
     const structuredData = {
