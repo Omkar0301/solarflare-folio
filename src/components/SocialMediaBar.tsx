@@ -1,8 +1,12 @@
 import { useState, useEffect } from 'react';
-import { MessageCircle, MessageSquare, Instagram, Linkedin, Youtube, Facebook, Mail, X } from 'lucide-react';
+import { MessageCircle, MessageSquare, Instagram, Linkedin, Youtube, Facebook, Mail, X, MessageCircleMore } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const SocialMediaBar = () => {
+interface SocialMediaBarProps {
+  onInquiryClick?: () => void;
+}
+
+const SocialMediaBar = ({ onInquiryClick }: SocialMediaBarProps) => {
   const [isVisible, setIsVisible] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -23,16 +27,9 @@ const SocialMediaBar = () => {
 
   const socialLinks = [
     {
-      icon: MessageCircle,
-      label: 'Contact Us',
-      url: '#contact',
-      color: 'bg-purple-600 hover:bg-purple-700',
-      textColor: 'text-white',
-    },
-    {
       icon: MessageSquare,
       label: 'WhatsApp',
-      url: 'https://wa.me/1234567890',
+      url: 'https://wa.me/9537222082',
       color: 'bg-green-500 hover:bg-green-600',
       textColor: 'text-white',
     },
@@ -65,9 +62,9 @@ const SocialMediaBar = () => {
       textColor: 'text-white',
     },
     {
-      icon: Mail,
+      icon: MessageCircleMore,
       label: 'Enquiry',
-      url: 'mailto:info@example.com',
+      onClick: onInquiryClick,
       color: 'bg-purple-500 hover:bg-purple-600',
       textColor: 'text-white',
     },
@@ -78,20 +75,26 @@ const SocialMediaBar = () => {
   return (
     <div className="fixed left-0 top-1/2 -translate-y-1/2 z-40 flex flex-col space-y-2 p-2">
       {socialLinks.map((item, index) => (
-        <a
+        <div
           key={index}
-          href={item.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group relative flex items-center h-12 rounded-r-lg overflow-hidden transition-all duration-300 hover:w-48"
+          onClick={item.onClick ? () => item.onClick?.() : undefined}
+          className={`group relative flex items-center h-12 rounded-r-lg overflow-hidden transition-all duration-300 hover:w-48 cursor-pointer ${!item.onClick ? 'cursor-pointer' : ''}`}
         >
-          <div className={`h-12 w-12 flex-shrink-0 flex items-center justify-center ${item.color} ${item.textColor}`}>
-            <item.icon className="h-5 w-5" />
-          </div>
-          <span className="absolute left-12 h-12 px-4 flex items-center bg-foreground text-background text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            {item.label}
-          </span>
-        </a>
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`flex items-center w-full h-full ${!item.url ? 'pointer-events-none' : ''}`}
+            onClick={(e) => !item.url && e.preventDefault()}
+          >
+            <div className={`h-12 w-12 flex-shrink-0 flex items-center justify-center ${item.color} ${item.textColor}`}>
+              <item.icon className="h-5 w-5" />
+            </div>
+            <span className="absolute left-12 h-12 px-4 flex items-center bg-foreground text-background text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              {item.label}
+            </span>
+          </a>
+        </div>
       ))}
       
       {isMobile && (

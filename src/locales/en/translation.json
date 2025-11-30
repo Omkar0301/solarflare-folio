@@ -33,6 +33,28 @@
   },
   "about": {
     "companyName": "KRISHIVA INNOVATIVES",
+    "founded": "Founded in 2025",
+    "headquarters": "Vadodara, Gujarat, India",
+    "aboutUs": "Krishiva Innovatives is a pioneering company specializing in providing innovative solutions in electrical engineering, backed by technical expertise and engineering excellence.",
+    "globalReach": {
+      "title": "Global Reach",
+      "description": "Through strategic alliances and collaborations, Krishiva Innovatives serves a diverse clientele across India, ensuring tailored solutions for each project."
+    },
+    "ourCommitment": {
+      "title": "Our Commitment",
+      "description": "Krishiva Innovatives has carved a leadership position in the electrical engineering sector by adhering to stringent quality standards. Our dedicated team ensures that every service delivered is reliable, efficient, and compliant with the highest standards of quality."
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Us",
+      "points": [
+        "Experienced & Skilled Team",
+        "Focus on Quality & Reliability",
+        "Innovative & Customized Solutions",
+        "Global Clientele & Strategic Networks"
+      ]
+    },
+    "ourMission": "Our Mission",
+    "missionText": "To deliver high-quality, reliable electrical engineering services that meet and exceed customer expectations, establishing standards of excellence in the region and globally.",
     "intro": "At KRISHIVA INNOVATIVES, we are committed to delivering cutting-edge electrical solutions that power industries and communities. With years of expertise in HT/LT cable installations, solar plant commissioning, and comprehensive electrical contracting, we ensure safety, efficiency, and sustainability in every project.",
     "vision": "Our Vision",
     "visionText": "To be India's most trusted name in electrical contracting and renewable energy solutions, driving sustainable development and powering the future with innovation and excellence.",
