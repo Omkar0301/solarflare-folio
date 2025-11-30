@@ -215,6 +215,11 @@
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Clear answers about rooftop solar, maintenance, and savings with Krishiva Innovatives.",
+    "cta": {
+      "title": "Still have questions?",
+      "body": "Get in touch with our solar experts for personalized advice and solutions.",
+      "note": "We're here to help you make the best decision for your energy needs."
+    },
     "tabs": {
       "general": "General Questions",
       "maintenance": "Solar Maintenance",
