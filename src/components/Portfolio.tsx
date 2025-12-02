@@ -7,11 +7,8 @@ const Portfolio = () => {
 
   const projectImages = [
     '/portfolio/IMG-20251122-WA0001.jpg',
-    '/portfolio/IMG-20251122-WA0002.jpg',
     '/portfolio/IMG-20251122-WA0003.jpg',
-    '/portfolio/IMG-20251122-WA0004.jpg',
     '/portfolio/IMG-20251122-WA0005.jpg',
-    '/portfolio/IMG-20251122-WA0006.jpg',
     '/portfolio/IMG-20251122-WA0007.jpg'
   ];
 

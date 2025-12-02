@@ -35,8 +35,9 @@ const About = () => {
           {/* Header */}
           <div className="text-center mb-12 sm:mb-16 animate-slide-up">
             <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl mb-4">
-              <span className="inline-block">{t('about.companyName').split(' ')[0]}</span>{' '}
-              <span className="text-primary">{t('about.companyName').split(' ').slice(1).join(' ')}</span>
+              <span className="inline-block bg-gradient-to-r from-green-500 via-lime-400 to-yellow-400 bg-clip-text text-transparent">
+                {t('about.companyName')}
+              </span>
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6" />
             

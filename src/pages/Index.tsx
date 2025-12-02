@@ -14,6 +14,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import ContactPopup from "@/components/ContactPopup";
+import FloatingIcons from "@/components/FloatingIcons";
 
 const Index = (): JSX.Element => {
   const [showBanner, setShowBanner] = useState(false);
@@ -131,6 +132,7 @@ const Index = (): JSX.Element => {
         <Certifications />
         <Contact onOpenContact={() => setShowContactPopup(true)} />
         <Footer />
+        <FloatingIcons />
       </main>
     </>
   );

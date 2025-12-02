@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Bolt, Home, Settings, HardHat, Wrench, Sun, Cpu, Zap } from 'lucide-react';
+import { Bolt, Home, Settings, HardHat, Wrench, Sun, Cpu, Zap, Droplet } from 'lucide-react';
 import { useEffect } from 'react';
 
 const Services = () => {
@@ -56,6 +56,10 @@ const Services = () => {
     {
       key: 'turnkeySolutions',
       icon: <Cpu className="w-8 h-8 text-primary" />,
+    },
+    {
+      key: 'solarCleaning',
+      icon: <Droplet className="w-8 h-8 text-primary" />,
     }
   ].filter(service => t(`services.items.${service.key}.title`) !== undefined);
 

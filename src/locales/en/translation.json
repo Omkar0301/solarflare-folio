@@ -55,7 +55,7 @@
     },
     "ourMission": "Our Mission",
     "missionText": "To deliver high-quality, reliable electrical engineering services that meet and exceed customer expectations, establishing standards of excellence in the region and globally.",
-    "intro": "At KRISHIVA INNOVATIVES, we are committed to delivering cutting-edge electrical solutions that power industries and communities. With years of expertise in HT/LT cable installations, solar plant commissioning, and comprehensive electrical contracting, we ensure safety, efficiency, and sustainability in every project.",
+    "intro": "At KRISHIVA INNOVATIVES, we are committed to delivering cutting-edge electrical solutions that power industries and communities. 15 of expertise in HT/LT cable installations, solar plant commissioning, and comprehensive electrical contracting, we ensure safety, efficiency, and sustainability in every project.",
     "vision": "Our Vision",
     "visionText": "To be India's most trusted name in electrical contracting and renewable energy solutions, driving sustainable development and powering the future with innovation and excellence.",
     "features": {
@@ -117,6 +117,10 @@
       "turnkeySolutions": {
         "title": "Turnkey Project Solutions",
         "description": "End-to-end project execution from concept to commissioning."
+      },
+      "solarCleaning": {
+        "title": "Solar Panel Cleaning & Maintenance",
+        "description": "Professional solar panel cleaning and maintenance services to ensure maximum energy output and efficiency."
       }
     }
   },
@@ -219,7 +223,7 @@
       },
       "address": {
         "title": "Address",
-        "value": "Sanket Heights, 912, Sun Pharma Rd, near Akshar Chowk, Parvati Nagar, Atladara, Vadodara, Gujarat 390012"
+        "value": "912, Sanket Height, Sun Pharma Road, Near Akshar Chowk, Opp Zydus Hospital, Atladara, Vadodara, Gujarat-390012"
       }
     },
     "hours": {
