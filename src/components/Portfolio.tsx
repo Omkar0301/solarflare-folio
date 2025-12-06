@@ -6,10 +6,22 @@ const Portfolio = () => {
   const { t } = useTranslation();
 
   const projectImages = [
+    '/portfolio/IMG-20250825-WA0013.jpg',
+    '/portfolio/IMG-20250825-WA0015.jpg',
+    '/portfolio/IMG-20250825-WA0019.jpg',
+    '/portfolio/IMG-20250825-WA0020.jpg',
     '/portfolio/IMG-20251122-WA0001.jpg',
+    // '/portfolio/IMG-20251122-WA0002.jpg',
     '/portfolio/IMG-20251122-WA0003.jpg',
+    '/portfolio/IMG-20251122-WA0004.jpg',
     '/portfolio/IMG-20251122-WA0005.jpg',
-    '/portfolio/IMG-20251122-WA0007.jpg'
+    // '/portfolio/IMG-20251122-WA0006.jpg',
+    '/portfolio/IMG-20251122-WA0007.jpg',
+    '/portfolio/IMG20250825154758.jpg',
+    '/portfolio/IMG20250825155848.jpg',
+    '/portfolio/IMG20250825160410.jpg',
+    '/portfolio/IMG20250825160447.jpg',
+    '/portfolio/IMG20250825160449.jpg'
   ];
 
   // Duplicate images for seamless looping
