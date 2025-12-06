@@ -185,7 +185,7 @@ const Hero = () => {
           transition={{ duration: 10, ease: "easeOut" }}
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/70 to-accent/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/60 via-primary/40 to-accent/50" />
       </div>
 
       {/* Animated Sun Icon */}
