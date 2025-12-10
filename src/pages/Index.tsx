@@ -15,19 +15,26 @@ import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import ContactPopup from "@/components/ContactPopup";
 import FloatingIcons from "@/components/FloatingIcons";
+import RibbonCuttingAnimation from "@/components/RibbonCuttingAnimation";
 
 const Index = (): JSX.Element => {
   const [showBanner, setShowBanner] = useState(false);
   const [showContactPopup, setShowContactPopup] = useState(false);
+  const [showRibbonAnimation, setShowRibbonAnimation] = useState(false);
+
+  const handleRibbonAnimationComplete = () => {
+    setShowRibbonAnimation(false);
+    localStorage.setItem("ribbonAnimationShown", "true");
+  };
 
   const handleBannerClose = () => {
     setShowBanner(false);
     localStorage.setItem("bannerClosed", "true");
-    
+
     // Show contact popup 10 seconds after banner is closed
     const contactPopupClosedAt = localStorage.getItem("contactPopupClosedAt");
     const now = Date.now();
-    
+
     if (!contactPopupClosedAt) {
       // First time visitor - show after 10 seconds
       setTimeout(() => {
@@ -51,6 +58,12 @@ const Index = (): JSX.Element => {
   };
 
   useEffect(() => {
+    // Check if ribbon animation was shown
+    const ribbonAnimationShown = localStorage.getItem("ribbonAnimationShown");
+    if (!ribbonAnimationShown) {
+      setShowRibbonAnimation(true);
+    }
+
     // Check if banner was previously closed
     const bannerClosed = localStorage.getItem("bannerClosed");
     if (!bannerClosed) {
@@ -79,7 +92,7 @@ const Index = (): JSX.Element => {
       geo: {
         "@type": "GeoCoordinates",
         // Updated to Mumbai, India coordinates
-        latitude: 19.0760,
+        latitude: 19.076,
         longitude: 72.8777,
       },
       openingHoursSpecification: [
@@ -116,6 +129,9 @@ const Index = (): JSX.Element => {
 
   return (
     <>
+      {showRibbonAnimation && (
+        <RibbonCuttingAnimation onComplete={handleRibbonAnimationComplete} />
+      )}
       {showBanner && <Banner onClose={handleBannerClose} />}
       {showContactPopup && <ContactPopup onClose={handleContactPopupClose} />}
       <main className="min-h-screen relative overflow-x-hidden">
