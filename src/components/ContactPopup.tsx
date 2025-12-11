@@ -59,7 +59,7 @@ const ContactPopup = ({ onClose }: ContactPopupProps) => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://formspree.io/f/mwpgezor", {
+      const response = await fetch("https://formspree.io/f/xpwvorpz", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
