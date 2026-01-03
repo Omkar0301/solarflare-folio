@@ -22,10 +22,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
-    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+    { icon: Facebook, href: 'https://www.facebook.com/share/1AvHGBhSg6/?mibextid=wwXIfr', label: 'Facebook' },
+    { icon: Twitter, href: 'https://x.com/KrishivaI?s=20', label: 'Twitter' },
+    { icon: Instagram, href: 'https://www.instagram.com/krishivainnovatives?igsh=OTdmZW5xaXQzd3Nm', label: 'Instagram' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/services/page/76a451340ab8184693', label: 'LinkedIn' },
   ];
 
   return (
